@@ -18,8 +18,8 @@ namespace Projeto01.Repositórios
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;
-            cd.CommandText = "Insert into Fornecedores (nome, tipo)" +
-                "values ('" + obj.Nome + "','" + obj.Tipo + "')";
+            cd.CommandText = $"Insert into Fornecedores" +
+                $"set nome = {obj.Nome}, tipo = {obj.Tipo}";
             cd.ExecuteNonQuery();
             cn.Close();
         }
@@ -31,7 +31,7 @@ namespace Projeto01.Repositórios
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;
-            cd.CommandText = $"Delete Cliente where idCliente= {obj.IdFornecedores}";
+            cd.CommandText = $"Delete Fornecedores where idCliente= {obj.IdFornecedores}";
             cd.ExecuteNonQuery();
             cn.Close();
         }
@@ -43,7 +43,7 @@ namespace Projeto01.Repositórios
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;
-            cd.CommandText = $"Update Cliente " +
+            cd.CommandText = $"Update Fornecedores " +
                              $"set nome = {obj.Nome}, tipo = {obj.Tipo}" +
                              $"where idCliente = {obj.IdFornecedores};";
             cd.ExecuteNonQuery();

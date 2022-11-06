@@ -18,8 +18,9 @@ namespace Projeto01.Repositórios
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;
-            cd.CommandText = "Insert into Cliente (codCliente, nome, cidade, estado)" + 
-                "values ('" + obj.CodCliente + "','"+ obj.Nome +"','"+obj.Cidade+"','"+obj.Estado+"')";
+            cd.CommandText = $"Insert into Cliente" +
+                $"set codCliente = {obj.CodCliente}, nome = {obj.Nome}, " +
+                $"cidade = {obj.Cidade}, estado = {obj.Estado}";
             cd.ExecuteNonQuery();
             cn.Close();
         }
