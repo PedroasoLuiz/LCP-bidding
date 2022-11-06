@@ -50,6 +50,7 @@ namespace Projeto01.Repositórios
                              $"where idCliente = {obj.IdCliente};";
             cd.ExecuteNonQuery();
             cn.Close();
+
         }
     }
 }
