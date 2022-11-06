@@ -9,6 +9,8 @@ namespace Projeto01.Model
     internal class Marcas
     {
         private string nome;
+        private int idMarca;
         public string Nome { get => nome; set => nome = value; }
+        public int IdMarca { get => idMarca; set => idMarca = value; }
     }
 }

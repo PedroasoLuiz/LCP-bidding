@@ -76,6 +76,8 @@
     <Compile Include="Repositórios\RepositorioFornecedores.cs" />
     <Compile Include="Repositórios\RepositorioLicitacao.cs" />
     <Compile Include="Repositórios\RepositorioMapa.cs" />
+    <Compile Include="Repositórios\RepositorioMarcas.cs" />
+    <Compile Include="Repositórios\RepositorioProduto.cs" />
     <Compile Include="Repositórios\RepUserManager.cs" />
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
