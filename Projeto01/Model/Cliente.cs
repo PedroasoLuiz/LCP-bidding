@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto01.Model
 {
-    internal class Licitacao
+    internal class Cliente
     {
         private int idCliente;
         private int codCliente;

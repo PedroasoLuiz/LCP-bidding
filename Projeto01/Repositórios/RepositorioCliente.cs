@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 
 namespace Projeto01.Repositórios
 {
-    internal class RepositorioCliente : IRepositorio<Licitacao>
+    internal class RepositorioCliente : IRepositorio<Cliente>
     {
-        public void Add(Licitacao obj)
+        public void Add(Cliente obj)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
@@ -24,7 +24,7 @@ namespace Projeto01.Repositórios
             cn.Close();
         }
 
-        public void Delete(Licitacao obj)
+        public void Delete(Cliente obj)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
@@ -37,7 +37,7 @@ namespace Projeto01.Repositórios
             cn.Close();
         }
 
-        public void Update(Licitacao obj)
+        public void Update(Cliente obj)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
