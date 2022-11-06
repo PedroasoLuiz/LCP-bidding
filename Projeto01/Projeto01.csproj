@@ -63,6 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Fornecedores.cs" />
+    <Compile Include="Model\Licitacao.cs" />
+    <Compile Include="Model\Mapa.cs" />
+    <Compile Include="Model\Marcas.cs" />
     <Compile Include="Model\UserManagerInterface.cs" />
     <Compile Include="Model\UserManager.cs" />
     <Compile Include="Repositórios\RepUserManager.cs" />
