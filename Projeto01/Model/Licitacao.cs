@@ -8,6 +8,7 @@ namespace Projeto01.Model
 {
     internal class Licitacao
     {
+        private int idLicitacao;
         private int codLicitacao;
         private string tipo;
         private DateTime data;
@@ -17,5 +18,6 @@ namespace Projeto01.Model
         public string Tipo { get => tipo; set => tipo = value; }
         public DateTime Data { get => data; set => data = value; }
         public int FkCliente { get => fkCliente; set => fkCliente = value; }
+        public int IdLicitacao { get => idLicitacao; set => idLicitacao = value; }
     }
 }
