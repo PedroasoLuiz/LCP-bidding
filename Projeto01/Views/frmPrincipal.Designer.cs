@@ -35,8 +35,6 @@
             this.lbUsuario = new System.Windows.Forms.Label();
             this.txtProcurar = new RJCodeAdvance.RJControls.RJTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.picOP = new System.Windows.Forms.PictureBox();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,11 +43,13 @@
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licitaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rjCircularPictureBox1 = new CustomControls.RJControls.RJCircularPictureBox();
+            this.picImagemUser = new CustomControls.RJControls.RJCircularPictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.picOP = new System.Windows.Forms.PictureBox();
             this.panelOpcoes.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagemUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelOpcoes
@@ -59,7 +59,7 @@
             this.panelOpcoes.Controls.Add(this.lbUsuario);
             this.panelOpcoes.Controls.Add(this.txtProcurar);
             this.panelOpcoes.Controls.Add(this.menuStrip1);
-            this.panelOpcoes.Controls.Add(this.rjCircularPictureBox1);
+            this.panelOpcoes.Controls.Add(this.picImagemUser);
             this.panelOpcoes.Location = new System.Drawing.Point(-3, 4);
             this.panelOpcoes.Name = "panelOpcoes";
             this.panelOpcoes.Size = new System.Drawing.Size(208, 566);
@@ -125,22 +125,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(176, 152);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 2;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // picOP
-            // 
-            this.picOP.Image = global::Projeto01.Properties.Resources.op0;
-            this.picOP.Location = new System.Drawing.Point(211, 6);
-            this.picOP.Name = "picOP";
-            this.picOP.Size = new System.Drawing.Size(34, 34);
-            this.picOP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picOP.TabIndex = 2;
-            this.picOP.TabStop = false;
-            this.picOP.Click += new System.EventHandler(this.picOP_Click);
             // 
             // dashboardToolStripMenuItem
             // 
@@ -214,21 +198,37 @@
             this.mapaToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.mapaToolStripMenuItem.Text = "Mapa";
             // 
-            // rjCircularPictureBox1
+            // picImagemUser
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 3;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("rjCircularPictureBox1.Image")));
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(48, 19);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(110, 110);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.rjCircularPictureBox1.TabIndex = 2;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.picImagemUser.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.picImagemUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.picImagemUser.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.picImagemUser.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.picImagemUser.BorderSize = 3;
+            this.picImagemUser.GradientAngle = 50F;
+            this.picImagemUser.Image = ((System.Drawing.Image)(resources.GetObject("picImagemUser.Image")));
+            this.picImagemUser.Location = new System.Drawing.Point(48, 19);
+            this.picImagemUser.Name = "picImagemUser";
+            this.picImagemUser.Size = new System.Drawing.Size(110, 110);
+            this.picImagemUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImagemUser.TabIndex = 2;
+            this.picImagemUser.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // picOP
+            // 
+            this.picOP.Image = global::Projeto01.Properties.Resources.op0;
+            this.picOP.Location = new System.Drawing.Point(211, 6);
+            this.picOP.Name = "picOP";
+            this.picOP.Size = new System.Drawing.Size(34, 34);
+            this.picOP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picOP.TabIndex = 2;
+            this.picOP.TabStop = false;
+            this.picOP.Click += new System.EventHandler(this.picOP_Click);
             // 
             // frmPrincipal
             // 
@@ -245,15 +245,14 @@
             this.panelOpcoes.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagemUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panelOpcoes;
-        private CustomControls.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private RJCodeAdvance.RJControls.RJTextBox txtProcurar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -268,5 +267,6 @@
         private System.Windows.Forms.ToolStripMenuItem mapaToolStripMenuItem;
         private System.Windows.Forms.PictureBox picOP;
         private System.Windows.Forms.Timer timer1;
+        public CustomControls.RJControls.RJCircularPictureBox picImagemUser;
     }
 }

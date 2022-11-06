@@ -18,5 +18,6 @@ namespace Projeto01
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
         }
+        public static int acao;
     }
 }
