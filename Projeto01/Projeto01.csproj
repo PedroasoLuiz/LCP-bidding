@@ -73,6 +73,7 @@
     <Compile Include="Model\UserManagerInterface.cs" />
     <Compile Include="Model\UserManager.cs" />
     <Compile Include="Repositórios\RepositorioCliente.cs" />
+    <Compile Include="Repositórios\RepositorioFornecedores.cs" />
     <Compile Include="Repositórios\RepositorioLicitacao.cs" />
     <Compile Include="Repositórios\RepUserManager.cs" />
     <Compile Include="Views\frmPrincipal.cs">
