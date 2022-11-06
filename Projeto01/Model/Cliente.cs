@@ -8,6 +8,7 @@ namespace Projeto01.Model
 {
     internal class Cliente
     {
+        private int idCliente;
         private int codCliente;
         private string nome;
         private string cidade;
@@ -17,5 +18,6 @@ namespace Projeto01.Model
         public string Nome { get => nome; set => nome = value; }
         public string Cidade { get => cidade; set => cidade = value; }
         public string Estado { get => estado; set => estado = value; }
+        public int IdCliente { get => idCliente; set => idCliente = value; }
     }
 }

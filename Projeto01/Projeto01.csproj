@@ -72,6 +72,7 @@
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\UserManagerInterface.cs" />
     <Compile Include="Model\UserManager.cs" />
+    <Compile Include="Repositórios\RepositorioCliente.cs" />
     <Compile Include="Repositórios\RepUserManager.cs" />
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
