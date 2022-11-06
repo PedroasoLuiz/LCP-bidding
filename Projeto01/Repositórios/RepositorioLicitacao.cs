@@ -22,6 +22,7 @@ namespace Projeto01.Repositórios
                 "values ('" + obj.CodCliente + "','" + obj.Nome + "','" + obj.Cidade + "','" + obj.Estado + "')";
             cd.ExecuteNonQuery();
             cn.Close();
+
         }
 
         public void Delete(Licitacao obj)
