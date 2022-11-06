@@ -63,8 +63,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Fornecedores.cs" />
+    <Compile Include="Model\IRepositorio.cs" />
+    <Compile Include="Model\Licitacao.cs" />
+    <Compile Include="Model\Mapa.cs" />
+    <Compile Include="Model\Marcas.cs" />
+    <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\UserManagerInterface.cs" />
     <Compile Include="Model\UserManager.cs" />
+    <Compile Include="Repositórios\RepositorioCliente.cs" />
+    <Compile Include="Repositórios\RepositorioFornecedores.cs" />
+    <Compile Include="Repositórios\RepositorioLicitacao.cs" />
+    <Compile Include="Repositórios\RepositorioMapa.cs" />
+    <Compile Include="Repositórios\RepositorioMarcas.cs" />
+    <Compile Include="Repositórios\RepositorioProduto.cs" />
     <Compile Include="Repositórios\RepUserManager.cs" />
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
