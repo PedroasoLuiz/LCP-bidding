@@ -16,6 +16,7 @@ namespace Projeto01.Model
         private double valorFinal;
         private int fkFornecedor;
         private int fkLicitacao;
+        private int idMapa;
 
         public double PrecoMax { get => precoMax; set => precoMax = value; }
         public double PrecoMin { get => precoMin; set => precoMin = value; }
@@ -25,5 +26,6 @@ namespace Projeto01.Model
         public double ValorFinal { get => valorFinal; set => valorFinal = value; }
         public int FkFornecedor { get => fkFornecedor; set => fkFornecedor = value; }
         public int FkLicitacao { get => fkLicitacao; set => fkLicitacao = value; }
+        public int IdMapa { get => idMapa; set => idMapa = value; }
     }
 }
