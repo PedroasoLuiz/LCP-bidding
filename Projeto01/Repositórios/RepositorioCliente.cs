@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 
 namespace Projeto01.Repositórios
 {
-    internal class RepositorioCliente : IRepositorio<Cliente>
+    internal class RepositorioCliente : IRepositorio<Licitacao>
     {
-        public void Add(Cliente obj)
+        public void Add(Licitacao obj)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
@@ -24,7 +24,7 @@ namespace Projeto01.Repositórios
             cn.Close();
         }
 
-        public void Delete(Cliente obj)
+        public void Delete(Licitacao obj)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
@@ -37,7 +37,7 @@ namespace Projeto01.Repositórios
             cn.Close();
         }
 
-        public void Update(Cliente obj)
+        public void Update(Licitacao obj)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
@@ -45,7 +45,9 @@ namespace Projeto01.Repositórios
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;
-            cd.CommandText = $"Update Cliente set Nome = '{dog.Nome}' where idCao = {dog.IdCao}";
+            cd.CommandText = $"Update Cliente " +
+                             $"set nome = {obj.Nome}, cidade = {obj.Cidade}, estado ={obj.Estado}"+
+                             $"where idCliente = {obj.IdCliente};";
             cd.ExecuteNonQuery();
             cn.Close();
         }
