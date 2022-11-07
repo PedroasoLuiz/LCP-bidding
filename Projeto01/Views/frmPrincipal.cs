@@ -80,5 +80,11 @@ namespace Projeto01
             }
 
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente fc = new frmCliente();
+            fc.ShowDialog();
+        }
     }
 }
