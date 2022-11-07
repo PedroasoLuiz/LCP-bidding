@@ -83,7 +83,25 @@ namespace Projeto01
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCliente fc = new frmCliente();
+            frmCadastro fc = new frmCadastro();
+
+            // Define a operação como cliente
+            fc.operacaoInterna = 1;
+            fc.lbCadastros.Text = "Cadastros: CLIENTES";
+            fc.lbTipo.Visible = false;
+            fc.txtTipo.Visible = false;
+            fc.ShowDialog();
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastro fc = new frmCadastro();
+
+            // Define a operação como fornecedores
+            fc.operacaoInterna = 2;
+            fc.lbCadastros.Text = "Cadastros: FORNECEDORES";
+            fc.lbTipo.Visible = true;
+            fc.txtTipo.Visible = true;
             fc.ShowDialog();
         }
     }

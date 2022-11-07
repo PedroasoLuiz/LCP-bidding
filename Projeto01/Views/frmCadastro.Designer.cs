@@ -1,6 +1,6 @@
 ﻿namespace Projeto01
 {
-    partial class frmCliente
+    partial class frmCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -48,12 +48,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.identificadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.códigoExternoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nomeRazãoSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancelar = new RJCodeAdvance.RJControls.RJButton();
             this.btnSalvar = new RJCodeAdvance.RJControls.RJButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbCadastros = new System.Windows.Forms.Label();
+            this.txtCodigoExterno = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbTipo = new System.Windows.Forms.Label();
+            this.txtTipo = new RJCodeAdvance.RJControls.RJTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +71,10 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 309);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 309);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(606, 159);
+            this.dataGridView1.Size = new System.Drawing.Size(638, 159);
             this.dataGridView1.TabIndex = 0;
             // 
             // txtID
@@ -265,6 +270,7 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
@@ -285,6 +291,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // panel2
             // 
@@ -350,6 +357,7 @@
             this.btnBuscar.AutoSize = false;
             this.btnBuscar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.identificadorToolStripMenuItem,
+            this.códigoExternoToolStripMenuItem,
             this.nomeRazãoSocialToolStripMenuItem,
             this.cidadeToolStripMenuItem,
             this.uFToolStripMenuItem});
@@ -363,6 +371,12 @@
             this.identificadorToolStripMenuItem.Name = "identificadorToolStripMenuItem";
             this.identificadorToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.identificadorToolStripMenuItem.Text = "Identificador";
+            // 
+            // códigoExternoToolStripMenuItem
+            // 
+            this.códigoExternoToolStripMenuItem.Name = "códigoExternoToolStripMenuItem";
+            this.códigoExternoToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.códigoExternoToolStripMenuItem.Text = "Código externo";
             // 
             // nomeRazãoSocialToolStripMenuItem
             // 
@@ -424,22 +438,102 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // label5
+            // lbCadastros
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 22);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Cadastros: CLIENTES";
+            this.lbCadastros.AutoSize = true;
+            this.lbCadastros.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCadastros.Location = new System.Drawing.Point(23, 31);
+            this.lbCadastros.Name = "lbCadastros";
+            this.lbCadastros.Size = new System.Drawing.Size(113, 22);
+            this.lbCadastros.TabIndex = 24;
+            this.lbCadastros.Text = "Cadastros: ";
             // 
-            // frmCliente
+            // txtCodigoExterno
+            // 
+            this.txtCodigoExterno.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodigoExterno.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.txtCodigoExterno.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoExterno.BorderRadius = 5;
+            this.txtCodigoExterno.BorderSize = 1;
+            this.txtCodigoExterno.Enabled = false;
+            this.txtCodigoExterno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoExterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoExterno.Location = new System.Drawing.Point(329, 135);
+            this.txtCodigoExterno.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtCodigoExterno.Multiline = false;
+            this.txtCodigoExterno.Name = "txtCodigoExterno";
+            this.txtCodigoExterno.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtCodigoExterno.PasswordChar = false;
+            this.txtCodigoExterno.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCodigoExterno.PlaceholderText = "";
+            this.txtCodigoExterno.Size = new System.Drawing.Size(82, 26);
+            this.txtCodigoExterno.TabIndex = 25;
+            this.txtCodigoExterno.Texts = "";
+            this.txtCodigoExterno.UnderlinedStyle = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(247, 140);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Cód. externo:";
+            // 
+            // lbTipo
+            // 
+            this.lbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTipo.AutoSize = true;
+            this.lbTipo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTipo.Location = new System.Drawing.Point(269, 245);
+            this.lbTipo.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.lbTipo.Name = "lbTipo";
+            this.lbTipo.Size = new System.Drawing.Size(32, 16);
+            this.lbTipo.TabIndex = 28;
+            this.lbTipo.Text = "Tipo:";
+            this.lbTipo.Visible = false;
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTipo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.txtTipo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTipo.BorderRadius = 5;
+            this.txtTipo.BorderSize = 1;
+            this.txtTipo.Enabled = false;
+            this.txtTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTipo.Location = new System.Drawing.Point(305, 240);
+            this.txtTipo.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtTipo.Multiline = false;
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtTipo.PasswordChar = false;
+            this.txtTipo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTipo.PlaceholderText = "";
+            this.txtTipo.Size = new System.Drawing.Size(106, 26);
+            this.txtTipo.TabIndex = 27;
+            this.txtTipo.Texts = "";
+            this.txtTipo.UnderlinedStyle = false;
+            this.txtTipo.Visible = false;
+            // 
+            // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 572);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbTipo);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtCodigoExterno);
+            this.Controls.Add(this.lbCadastros);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancelar);
@@ -462,10 +556,9 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmCliente";
+            this.Name = "frmCadastro";
             this.Text = "Cadastros: CLIENTES";
             this.Load += new System.EventHandler(this.frmCliente_Load);
-            this.Click += new System.EventHandler(this.frmCliente_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -501,6 +594,11 @@
         private System.Windows.Forms.ToolStripMenuItem uFToolStripMenuItem;
         private RJCodeAdvance.RJControls.RJButton btnCancelar;
         private RJCodeAdvance.RJControls.RJButton btnSalvar;
-        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lbCadastros;
+        private RJCodeAdvance.RJControls.RJTextBox txtCodigoExterno;
+        private System.Windows.Forms.ToolStripMenuItem códigoExternoToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lbTipo;
+        public RJCodeAdvance.RJControls.RJTextBox txtTipo;
     }
 }
