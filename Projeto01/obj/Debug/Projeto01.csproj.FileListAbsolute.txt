@@ -52,3 +52,21 @@ C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.cspro
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CopyComplete
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.exe
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.pdb
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\bin\Debug\Projeto01.exe.config
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\bin\Debug\Projeto01.exe
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\bin\Debug\Projeto01.pdb
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\bin\Debug\CustomControls.RJControls.dll
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\bin\Debug\MetroFramework.dll
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\bin\Debug\RJCodeAdvance.RJControls.dll
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.AssemblyReference.cache
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.SuggestedBindingRedirects.cache
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmPrincipal.resources
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmCliente.resources
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmLogin.resources
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.Properties.Resources.resources
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.GenerateResource.cache
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CoreCompileInputs.cache
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CopyComplete
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.exe
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.pdb
