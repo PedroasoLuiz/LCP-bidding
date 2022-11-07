@@ -90,6 +90,8 @@ namespace Projeto01
             fc.lbCadastros.Text = "Cadastros: CLIENTES";
             fc.lbTipo.Visible = false;
             fc.txtTipo.Visible = false;
+            fc.txtCidade.Visible = true;
+            fc.panelProduto.Visible = false;
             fc.ShowDialog();
         }
 
@@ -102,7 +104,25 @@ namespace Projeto01
             fc.lbCadastros.Text = "Cadastros: FORNECEDORES";
             fc.lbTipo.Visible = true;
             fc.txtTipo.Visible = true;
+            fc.txtCidade.Visible = true;
+            fc.panelProduto.Visible = false;
             fc.ShowDialog();
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastro fc = new frmCadastro();
+
+            // Define a operação como produtos
+            fc.operacaoInterna = 4;
+            fc.lbCadastros.Text = "Cadastros: PRODUTOS";
+            fc.lbNome.Text = "Descrição:";
+            fc.lbTipo.Visible = false;
+            fc.txtTipo.Visible = false;
+            fc.txtCidade.Visible = false;
+            fc.panelProduto.Visible = true;
+            fc.ShowDialog();
+
         }
     }
 }
