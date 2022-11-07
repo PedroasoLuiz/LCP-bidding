@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto01.Model;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Projeto01.Repositórios
 {
@@ -22,6 +23,8 @@ namespace Projeto01.Repositórios
                 $"set codCliente = {obj.CodCliente}, nome = {obj.Nome}, " +
                 $"cidade = {obj.Cidade}, estado = {obj.Estado}";
             cd.ExecuteNonQuery();
+
+            MessageBox.Show($"{obj.Nome} cadastrado com sucesso!");
             cn.Close();
         }
 
