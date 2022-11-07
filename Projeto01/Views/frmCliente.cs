@@ -76,11 +76,15 @@ namespace Projeto01
                     // Operação realizada para o repositório {CLIENTE}
                     case 1:
                         RepCli = new RepositorioCliente();
-                        
+                        Cliente c = new Cliente();
                         switch (operacao)
                         {
-                            // Operaç
+                            // Operação de cadastro de clientes;
                             case 1:
+                                c.Nome = txtNome.Text;
+                                c.Cidade = txtCidade.Text;
+                                c.Estado = txtUF.Text;
+                                RepCli.Add(c);
                                 break;
 
                             default:
