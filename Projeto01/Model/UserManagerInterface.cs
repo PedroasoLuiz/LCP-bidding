@@ -11,5 +11,7 @@ namespace Projeto01.Model
         UserManager Get(string email, string senha);
 
         UserManager RecuperaEmail(string email);
+
+        void acoes(UserManager Usuario);
     }
 }
