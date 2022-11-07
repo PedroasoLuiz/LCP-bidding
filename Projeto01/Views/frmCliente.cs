@@ -1,4 +1,6 @@
 ﻿using System;
+using Projeto01.Model;
+using Projeto01.Repositórios;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,22 @@ namespace Projeto01
         {
             InitializeComponent();
         }
+        
+        public int operacaoInterna;
+        // Operação Interna é a variável que determinará se o reposítorio
+        // de trabalho da chamada
+        // [RepositorioCliente], [RepositorioFornecedores]
+
+        public int operacao;
+        // Operação será a variável que atribuirá o tipo da ação
+        // quer será realizada ao executar o comando
+        // [Buscar], [Alterar], [Cadastrar], [Excluir]
+
+
+
+
+        RepositorioCliente RepCli = null;
+        RepositorioFornecedores RepForn = null;
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
@@ -39,8 +57,6 @@ namespace Projeto01
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-
-            txtID.Enabled = true;
             txtNome.Enabled = true;
             txtCidade.Enabled = true;
             txtUF.Enabled = true;
@@ -51,8 +67,48 @@ namespace Projeto01
 
         }
 
-        private void rjButton1_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                switch (operacaoInterna)
+                {
+                    // Operação realizada para o repositório {CLIENTE}
+                    case 1:
+                        RepCli = new RepositorioCliente();
+                        Cliente c = new Cliente();
+                        switch (operacao)
+                        {
+                            // Operação de cadastro de clientes;
+                            case 1:
+                                c.Nome = txtNome.Text;
+                                c.Cidade = txtCidade.Text;
+                                c.Estado = txtUF.Text;
+                                RepCli.Add(c);
+                                break;
+
+                            default:
+                                break;
+                        }
+
+
+                        break;
+
+                    // Operação realizada para o repositório {FORNECEDOR}
+                    case 2:
+                        RepForn = new RepositorioFornecedores();
+
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             btnBuscar.Enabled = true;
             btnNovo.Enabled = true;
             btnAlterar.Enabled = true;
