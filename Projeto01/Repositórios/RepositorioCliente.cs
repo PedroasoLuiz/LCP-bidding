@@ -19,9 +19,8 @@ namespace Projeto01.Repositórios
 
             // Define a query a ser executada
             string Query = 
-                $"INSERT INTO Cliente " +
-                $"SET codCliente = {obj.CodCliente}, Nome = {obj.Nome}, " +
-                $"Cidade = {obj.Cidade}, Estado = {obj.Estado}";
+                $"INSERT INTO Cliente (codCliente,Nome,Cidade,Estado) " +
+                $"VALUES ('{obj.CodCliente}','{obj.Nome}','{obj.Cidade}','{obj.Estado}')";
 
             conn.ExecuteQuery(Query);           // Executa a query
             conn.CloseConnection();             // Encerra conexão
@@ -35,7 +34,7 @@ namespace Projeto01.Repositórios
 
             // Define a query a ser executada
             string Query =
-                $"DELETE Cliente WHERE idCliente= {obj.IdCliente}";
+                $"DELETE Cliente WHERE idCliente = {obj.IdCliente}";
 
             conn.ExecuteQuery(Query);           // Executa a query
             conn.CloseConnection();             // Encerra conexão
@@ -49,7 +48,7 @@ namespace Projeto01.Repositórios
             // Define a query a ser executada
             string Query = 
                 $"UPDATE Cliente " +
-                $"SET nome = {obj.Nome}, cidade = {obj.Cidade}, estado ={obj.Estado} "+
+                $"SET Nome = {obj.Nome}, Cidade = {obj.Cidade}, Estado ={obj.Estado} "+
                 $"WHERE idCliente = {obj.IdCliente} ";
 
             conn.ExecuteQuery(Query);           // Executa a query
