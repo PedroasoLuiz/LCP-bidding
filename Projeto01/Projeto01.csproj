@@ -79,23 +79,17 @@
     <Compile Include="Repositórios\RepositorioMarcas.cs" />
     <Compile Include="Repositórios\RepositorioProduto.cs" />
     <Compile Include="Repositórios\RepUserManager.cs" />
-    <Compile Include="Views\frmFornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\frmFornecedor.Designer.cs">
-      <DependentUpon>frmFornecedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmCliente.cs">
+    <Compile Include="Views\frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCliente.Designer.cs">
-      <DependentUpon>frmCliente.cs</DependentUpon>
+    <Compile Include="Views\frmCadastro.Designer.cs">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmLogin.cs">
       <SubType>Form</SubType>
@@ -105,14 +99,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\frmFornecedor.resx">
-      <DependentUpon>frmFornecedor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmCliente.resx">
-      <DependentUpon>frmCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmCadastro.resx">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

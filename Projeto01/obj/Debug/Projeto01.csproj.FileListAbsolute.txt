@@ -70,3 +70,21 @@ C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto
 C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CopyComplete
 C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.exe
 C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.pdb
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\Projeto01.exe.config
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\Projeto01.exe
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\Projeto01.pdb
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\CustomControls.RJControls.dll
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\MetroFramework.dll
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\MetroFramework.Fonts.dll
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\RJCodeAdvance.RJControls.dll
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.AssemblyReference.cache
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.SuggestedBindingRedirects.cache
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmPrincipal.resources
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmCadastro.resources
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmLogin.resources
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.Properties.Resources.resources
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.GenerateResource.cache
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CoreCompileInputs.cache
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CopyComplete
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.exe
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.pdb

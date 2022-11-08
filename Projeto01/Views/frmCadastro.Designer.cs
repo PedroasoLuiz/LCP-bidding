@@ -1,6 +1,6 @@
 ﻿namespace Projeto01
 {
-    partial class frmCliente
+    partial class frmCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.txtCidade = new RJCodeAdvance.RJControls.RJTextBox();
             this.txtUF = new RJCodeAdvance.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbNome = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnNovo = new RJCodeAdvance.RJControls.RJButton();
@@ -48,14 +48,28 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnBuscar = new System.Windows.Forms.ToolStripMenuItem();
             this.identificadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.códigoExternoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nomeRazãoSocialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancelar = new RJCodeAdvance.RJControls.RJButton();
             this.btnSalvar = new RJCodeAdvance.RJControls.RJButton();
+            this.lbCadastros = new System.Windows.Forms.Label();
+            this.txtCodigoExterno = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbTipo = new System.Windows.Forms.Label();
+            this.txtTipo = new RJCodeAdvance.RJControls.RJTextBox();
+            this.panelProduto = new System.Windows.Forms.Panel();
+            this.txtCusto = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtUnid = new RJCodeAdvance.RJControls.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMarca = new RJCodeAdvance.RJControls.RJTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panelProduto.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -66,10 +80,10 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 309);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 309);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(606, 159);
+            this.dataGridView1.Size = new System.Drawing.Size(638, 159);
             this.dataGridView1.TabIndex = 0;
             // 
             // txtID
@@ -185,19 +199,21 @@
             this.label1.Size = new System.Drawing.Size(21, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "ID:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lbNome
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 176);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Nome/Razão social:";
+            this.lbNome.AutoSize = true;
+            this.lbNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.Location = new System.Drawing.Point(33, 176);
+            this.lbNome.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(115, 16);
+            this.lbNome.TabIndex = 8;
+            this.lbNome.Text = "Nome/Razão social:";
+            this.lbNome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -211,6 +227,7 @@
             this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "Cidade:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -224,6 +241,7 @@
             this.label4.Size = new System.Drawing.Size(23, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "UF:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnNovo
             // 
@@ -286,6 +304,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // panel2
             // 
@@ -351,6 +370,7 @@
             this.btnBuscar.AutoSize = false;
             this.btnBuscar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.identificadorToolStripMenuItem,
+            this.códigoExternoToolStripMenuItem,
             this.nomeRazãoSocialToolStripMenuItem,
             this.cidadeToolStripMenuItem,
             this.uFToolStripMenuItem});
@@ -364,6 +384,12 @@
             this.identificadorToolStripMenuItem.Name = "identificadorToolStripMenuItem";
             this.identificadorToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.identificadorToolStripMenuItem.Text = "Identificador";
+            // 
+            // códigoExternoToolStripMenuItem
+            // 
+            this.códigoExternoToolStripMenuItem.Name = "códigoExternoToolStripMenuItem";
+            this.códigoExternoToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.códigoExternoToolStripMenuItem.Text = "Código externo";
             // 
             // nomeRazãoSocialToolStripMenuItem
             // 
@@ -425,22 +451,255 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // lbCadastros
+            // 
+            this.lbCadastros.AutoSize = true;
+            this.lbCadastros.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCadastros.Location = new System.Drawing.Point(23, 31);
+            this.lbCadastros.Name = "lbCadastros";
+            this.lbCadastros.Size = new System.Drawing.Size(113, 22);
+            this.lbCadastros.TabIndex = 24;
+            this.lbCadastros.Text = "Cadastros: ";
+            // 
+            // txtCodigoExterno
+            // 
+            this.txtCodigoExterno.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodigoExterno.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.txtCodigoExterno.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoExterno.BorderRadius = 5;
+            this.txtCodigoExterno.BorderSize = 1;
+            this.txtCodigoExterno.Enabled = false;
+            this.txtCodigoExterno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoExterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCodigoExterno.Location = new System.Drawing.Point(329, 135);
+            this.txtCodigoExterno.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtCodigoExterno.Multiline = false;
+            this.txtCodigoExterno.Name = "txtCodigoExterno";
+            this.txtCodigoExterno.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtCodigoExterno.PasswordChar = false;
+            this.txtCodigoExterno.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCodigoExterno.PlaceholderText = "";
+            this.txtCodigoExterno.Size = new System.Drawing.Size(82, 26);
+            this.txtCodigoExterno.TabIndex = 25;
+            this.txtCodigoExterno.Texts = "";
+            this.txtCodigoExterno.UnderlinedStyle = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(247, 140);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Cód. externo:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbTipo
+            // 
+            this.lbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTipo.AutoSize = true;
+            this.lbTipo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTipo.Location = new System.Drawing.Point(269, 245);
+            this.lbTipo.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.lbTipo.Name = "lbTipo";
+            this.lbTipo.Size = new System.Drawing.Size(32, 16);
+            this.lbTipo.TabIndex = 28;
+            this.lbTipo.Text = "Tipo:";
+            this.lbTipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbTipo.Visible = false;
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTipo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.txtTipo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTipo.BorderRadius = 5;
+            this.txtTipo.BorderSize = 1;
+            this.txtTipo.Enabled = false;
+            this.txtTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTipo.Location = new System.Drawing.Point(305, 240);
+            this.txtTipo.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtTipo.Multiline = false;
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtTipo.PasswordChar = false;
+            this.txtTipo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTipo.PlaceholderText = "";
+            this.txtTipo.Size = new System.Drawing.Size(106, 26);
+            this.txtTipo.TabIndex = 27;
+            this.txtTipo.Texts = "";
+            this.txtTipo.UnderlinedStyle = false;
+            this.txtTipo.Visible = false;
+            // 
+            // panelProduto
+            // 
+            this.panelProduto.Controls.Add(this.rjButton1);
+            this.panelProduto.Controls.Add(this.label8);
+            this.panelProduto.Controls.Add(this.label5);
+            this.panelProduto.Controls.Add(this.txtMarca);
+            this.panelProduto.Controls.Add(this.txtCusto);
+            this.panelProduto.Controls.Add(this.txtUnid);
+            this.panelProduto.Controls.Add(this.label7);
+            this.panelProduto.Location = new System.Drawing.Point(81, 203);
+            this.panelProduto.Name = "panelProduto";
+            this.panelProduto.Size = new System.Drawing.Size(475, 89);
+            this.panelProduto.TabIndex = 29;
+            this.panelProduto.Visible = false;
+            // 
+            // txtCusto
+            // 
+            this.txtCusto.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCusto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.txtCusto.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCusto.BorderRadius = 5;
+            this.txtCusto.BorderSize = 1;
+            this.txtCusto.Enabled = false;
+            this.txtCusto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCusto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCusto.Location = new System.Drawing.Point(79, 5);
+            this.txtCusto.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtCusto.MaximumSize = new System.Drawing.Size(1200, 0);
+            this.txtCusto.MinimumSize = new System.Drawing.Size(150, 0);
+            this.txtCusto.Multiline = false;
+            this.txtCusto.Name = "txtCusto";
+            this.txtCusto.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtCusto.PasswordChar = false;
+            this.txtCusto.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCusto.PlaceholderText = "";
+            this.txtCusto.Size = new System.Drawing.Size(150, 26);
+            this.txtCusto.TabIndex = 5;
+            this.txtCusto.Texts = "";
+            this.txtCusto.UnderlinedStyle = false;
+            // 
+            // txtUnid
+            // 
+            this.txtUnid.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUnid.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.txtUnid.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUnid.BorderRadius = 5;
+            this.txtUnid.BorderSize = 1;
+            this.txtUnid.Enabled = false;
+            this.txtUnid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUnid.Location = new System.Drawing.Point(279, 5);
+            this.txtUnid.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtUnid.Multiline = false;
+            this.txtUnid.Name = "txtUnid";
+            this.txtUnid.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtUnid.PasswordChar = false;
+            this.txtUnid.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUnid.PlaceholderText = "";
+            this.txtUnid.Size = new System.Drawing.Size(103, 26);
+            this.txtUnid.TabIndex = 6;
+            this.txtUnid.Texts = "";
+            this.txtUnid.UnderlinedStyle = false;
+            // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 31);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(26, 10);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 22);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Cadastros: CLIENTES";
+            this.label5.Size = new System.Drawing.Size(41, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Custo:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // frmCliente
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(236, 10);
+            this.label7.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 16);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Unid.:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMarca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.txtMarca.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMarca.BorderRadius = 5;
+            this.txtMarca.BorderSize = 1;
+            this.txtMarca.Enabled = false;
+            this.txtMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMarca.Location = new System.Drawing.Point(79, 42);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtMarca.MaximumSize = new System.Drawing.Size(1200, 0);
+            this.txtMarca.MinimumSize = new System.Drawing.Size(150, 0);
+            this.txtMarca.Multiline = false;
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
+            this.txtMarca.PasswordChar = false;
+            this.txtMarca.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMarca.PlaceholderText = "";
+            this.txtMarca.Size = new System.Drawing.Size(303, 26);
+            this.txtMarca.TabIndex = 5;
+            this.txtMarca.Texts = "";
+            this.txtMarca.UnderlinedStyle = false;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 47);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 16);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Marca:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.White;
+            this.rjButton1.BorderRadius = 5;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(382, 42);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(65, 26);
+            this.rjButton1.TabIndex = 13;
+            this.rjButton1.Text = "Buscar";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 572);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panelProduto);
+            this.Controls.Add(this.lbTipo);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtCodigoExterno);
+            this.Controls.Add(this.lbCadastros);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancelar);
@@ -454,7 +713,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUF);
             this.Controls.Add(this.txtCidade);
@@ -463,13 +722,14 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmCliente";
+            this.Name = "frmCadastro";
             this.Text = "Cadastros: CLIENTES";
             this.Load += new System.EventHandler(this.frmCliente_Load);
-            this.Click += new System.EventHandler(this.frmCliente_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelProduto.ResumeLayout(false);
+            this.panelProduto.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,12 +740,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private RJCodeAdvance.RJControls.RJTextBox txtID;
         private RJCodeAdvance.RJControls.RJTextBox txtNome;
-        private RJCodeAdvance.RJControls.RJTextBox txtCidade;
-        private RJCodeAdvance.RJControls.RJTextBox txtUF;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private RJCodeAdvance.RJControls.RJButton btnNovo;
         private RJCodeAdvance.RJControls.RJButton btnAlterar;
         private RJCodeAdvance.RJControls.RJButton btnExcluir;
@@ -502,6 +757,24 @@
         private System.Windows.Forms.ToolStripMenuItem uFToolStripMenuItem;
         private RJCodeAdvance.RJControls.RJButton btnCancelar;
         private RJCodeAdvance.RJControls.RJButton btnSalvar;
-        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lbCadastros;
+        private RJCodeAdvance.RJControls.RJTextBox txtCodigoExterno;
+        private System.Windows.Forms.ToolStripMenuItem códigoExternoToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lbTipo;
+        public RJCodeAdvance.RJControls.RJTextBox txtTipo;
+        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private RJCodeAdvance.RJControls.RJTextBox txtMarca;
+        private RJCodeAdvance.RJControls.RJTextBox txtCusto;
+        private RJCodeAdvance.RJControls.RJTextBox txtUnid;
+        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label lbNome;
+        public System.Windows.Forms.Panel panelProduto;
+        public RJCodeAdvance.RJControls.RJTextBox txtCidade;
+        public RJCodeAdvance.RJControls.RJTextBox txtUF;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
     }
 }
