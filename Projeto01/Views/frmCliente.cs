@@ -114,5 +114,10 @@ namespace Projeto01
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
