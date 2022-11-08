@@ -18,8 +18,8 @@ namespace Projeto01.Repositórios
             conn.OpenConnection();              // Abre a conexão
 
             string Query = 
-                $"INSERT INTO Fornecedores " +
-                $"SET nome = {obj.Nome}, tipo = {obj.Tipo} ";
+                $"INSERT INTO Fornecedores (nome,tipo) " +
+                $"VALUES ('{obj.Nome}','{obj.Tipo}') ";
 
             conn.ExecuteQuery(Query);           // Executa a query
             conn.CloseConnection();             // Encerra conexão

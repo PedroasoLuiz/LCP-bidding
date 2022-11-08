@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto01.Model;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace Projeto01.Repositórios
 {
@@ -16,36 +17,38 @@ namespace Projeto01.Repositórios
             conn = new Conexao();               // Chama a classe conexão
             conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = "Insert into Marcas (nome)" +
-                "values ('" + obj.Nome + "')";
-            cd.ExecuteNonQuery();
-            cn.Close();
+            string Query =
+                "INSERT INTO Marcas (nome)" +
+               $"VALUES ('{obj.Nome}')";
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
+
         }
         public void Delete(Marcas obj)
         {
             conn = new Conexao();               // Chama a classe conexão
             conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = $"Delete Marcas where idCliente= {obj.IdMarca}";
-            cd.ExecuteNonQuery();
-            cn.Close();
+           string Query = 
+                $"DELETE Marcas " +
+                $"WHERE idMarcas= {obj.IdMarca}";
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
         }
         public void Update(Marcas obj)
         {
             conn = new Conexao();               // Chama a classe conexão
             conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = $"Update Marcas " +
-                             $"set nome = {obj.Nome}" +
-                             $"where idCliente = {obj.IdMarca};";
-            cd.ExecuteNonQuery();
-            cn.Close();
+           string Query = 
+                $"UPDATE Marcas " +
+                $"SET nome = {obj.Nome}" +
+                $"WHERE idMarcas = {obj.IdMarca};";
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
         }
     }
 }

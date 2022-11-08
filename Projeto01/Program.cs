@@ -25,15 +25,15 @@ namespace Projeto01
 
 
             // CONEXÃO COM MONGODB
-            MongoClient dbClient = new MongoClient("mongodb+srv://lcpLicitacoes:<password>mongo123.ethffsk.mongodb.net/?retryWrites=true&w=majority");
+            //MongoClient dbClient = new MongoClient("mongodb+srv://lcpLicitacoes:<password>mongo123.ethffsk.mongodb.net/?retryWrites=true&w=majority");
 
-            var dbList = dbClient.ListDatabases().ToList();
+            //var dbList = dbClient.ListDatabases().ToList();
 
-            Console.WriteLine("The list of databases on this server is: ");
-            foreach (var db in dbList)
-            {
-                Console.WriteLine(db);
-            }
+            //Console.WriteLine("The list of databases on this server is: ");
+            //foreach (var db in dbList)
+            //{
+            //    Console.WriteLine(db);
+            //}
         }
         public static int acao;
         public static SqlConnection cn = null;

@@ -17,10 +17,10 @@ namespace Projeto01.Repositórios
             conn = new Conexao();               // Chama a classe conexão
             conn.OpenConnection();              // Abre a conexão
 
-            string Query = 
-                "Insert into Fornecedores (precoMax, precoMin, quantidade, unidade, valorFinal, fkProduto, fkFornecedor, fkLicitacao)" 
-                + "values ('" + obj.PrecoMax + "','" + obj.PrecoMin + "','" + obj.PrecoMin + "','" + obj.Quantidade + "','" 
-                + obj.Unidade + "','" + obj.ValorFinal + "','" + obj.FkProduto + "','" + obj.FkFornecedor + "','" + obj.FkLicitacao + "')";
+            string Query =
+                "INSERT INTO Mapa (PrecoMax, PrecoMin, Quantidade, Unidade, fkProduto, ValorFinal, fkFornecedor, fkLicitacao) " +
+               $"VALUES ('{obj.PrecoMax}','{obj.PrecoMin}','{obj.Quantidade}','{obj.Unidade}',"+ 
+               $"{obj.FkProduto}','{obj.ValorFinal}','{obj.FkFornecedor}','{obj.FkLicitacao}') ";
 
 
             conn.ExecuteQuery(Query);           // Executa a query
@@ -31,25 +31,26 @@ namespace Projeto01.Repositórios
             conn = new Conexao();               // Chama a classe conexão
             conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = $"Delete Cliente where idCliente= {obj.IdMapa}";
-            cd.ExecuteNonQuery();
-            cn.Close();
+            string Query =
+                $"DELETE Mapa " +
+                $"WHERE idCliente= {obj.IdMapa}";
+            conn.ExecuteQuery(Query);
+            conn.CloseConnection();
         }
         public void Update(Mapa obj)
         {
             conn = new Conexao();               // Chama a classe conexão
             conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = $"Update Cliente " +
-                             $"set precoMax = {obj.PrecoMax}, precoMin = {obj.PrecoMin}, quantidade = { obj.Quantidade}, unidade = {obj.Unidade}, " +
-                             $"valorFinal = {obj.ValorFinal}, fkProduto = {obj.FkProduto}, fkFornecedor = {obj.FkFornecedor}, fkLicitacao = {obj.FkLicitacao}" + 
-                             $"where idCliente = {obj.IdMapa};";
-            cd.ExecuteNonQuery();
-            cn.Close();
+            string Query = 
+                $"UPDATE Mapa " +
+                $"SET PrecoMax = {obj.PrecoMax}, PrecoMin = {obj.PrecoMin}, Quantidade = {obj.Quantidade}, Unidade = {obj.Unidade}, " +
+                $"fkProduto = {obj.FkProduto}, ValorFinal = {obj.ValorFinal}, fkFornecedor = {obj.FkFornecedor}, fkLicitacao = {obj.FkLicitacao}" +
+                $"WHERE idMapa = {obj.IdMapa};";
+
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
         }
     }
 }
