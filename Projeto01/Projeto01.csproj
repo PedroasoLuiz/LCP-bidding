@@ -180,6 +180,12 @@
     <Compile Include="Repositórios\RepositorioMarcas.cs" />
     <Compile Include="Repositórios\RepositorioProduto.cs" />
     <Compile Include="Repositórios\RepUserManager.cs" />
+    <Compile Include="Views\frmLicitacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmLicitacao.Designer.cs">
+      <DependentUpon>frmLicitacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\frmLicitacao.resx">
+      <DependentUpon>frmLicitacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

@@ -88,3 +88,5 @@ D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CoreCompileInputs.
 D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.CopyComplete
 D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.exe
 D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.pdb
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.Views.frmLicitacao.resources
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmCadastro.resources
