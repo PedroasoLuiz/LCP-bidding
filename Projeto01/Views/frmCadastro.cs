@@ -57,6 +57,7 @@ namespace Projeto01
         {
             AtivaCampos();
             DesativaControles();
+            operacao = 1;
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -141,6 +142,76 @@ namespace Projeto01
                             // Operação para exclusão de fornecedores
                             case 3:
                                 RepForn.Delete(f);
+                                break;
+
+                            default:
+                                MessageBox.Show("Não foi possível realizar a operação solicitada, tente novamente.", "Erro de operação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                break;
+                        }
+
+                        break;
+
+                    // Operação realizada para o reposítório {MARCA}
+                    case 3:
+                        RepMarc = new RepositorioMarcas();
+                        Marcas m = new Marcas();
+
+                        m.IdMarca = int.Parse(txtID.Texts);
+                        m.Nome = txtNome.Texts;
+
+                        
+                        switch (operacao)
+                        {
+                            // Operação para cadastro de marcas
+                            case 1:
+                                RepMarc.Add(m);
+                                break;
+
+                            // Operação para atualização de marcas
+                            case 2:
+                                RepMarc.Update(m);
+                                break;
+
+                            // Operação para exclusão de marcas
+                            case 3:
+                                RepMarc.Delete(m);
+                                break;
+
+                            default:
+                                MessageBox.Show("Não foi possível realizar a operação solicitada, tente novamente.", "Erro de operação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                break;
+                        }
+
+                        break;
+
+
+                    // Operação realizada para repositório {PRODUTOS}
+                    case 4:
+                        RepProd = new RepositorioProduto();
+                        Produto p = new Produto();
+
+                        p.IdProduto = int.Parse(txtID.Texts);
+                        p.CodProduto = int.Parse(txtCodigoExterno.Texts);
+                        p.Descricao = txtNome.Texts;
+                        p.Custo = double.Parse(txtCusto.Texts);
+                        p.Unidade = txtUnid.Texts;
+                        //p.FkMarcas = int.Parse();
+
+                        switch (operacao)
+                        {
+                            // Operação para cadastro de marcas
+                            case 1:
+                                RepProd.Add(p);
+                                break;
+
+                            // Operação para atualização de marcas
+                            case 2:
+                                RepProd.Update(p);
+                                break;
+
+                            // Operação para exclusão de marcas
+                            case 3:
+                                RepProd.Delete(p);
                                 break;
 
                             default:

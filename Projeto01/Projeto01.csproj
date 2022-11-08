@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Conexao.cs" />
     <Compile Include="Model\Fornecedores.cs" />
     <Compile Include="Model\IRepositorio.cs" />
     <Compile Include="Model\Licitacao.cs" />

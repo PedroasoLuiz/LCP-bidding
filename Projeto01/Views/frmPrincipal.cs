@@ -124,5 +124,16 @@ namespace Projeto01
             fc.ShowDialog();
 
         }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastro fc = new frmCadastro();
+            fc.operacaoInterna = 3;
+        }
     }
 }
