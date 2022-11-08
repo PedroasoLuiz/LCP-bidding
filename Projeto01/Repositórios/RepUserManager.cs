@@ -16,14 +16,14 @@ namespace Projeto01.Repositórios
 {
     internal class RepUserManager : InterUserManagerInterface
     {
+        Conexao conn = null;
         public void acoes(UserManager Usuario)
         {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server=LocalHost; Database=LCP-bidding;UID=sa;PWD=Ped9922.;";
-            conn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
             SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conn;
+            cmd.Connection = conn.OpenConnection();
             cmd.Parameters.Add("@Binario", SqlDbType.Image);
 
             if (Usuario.Imagem == null)
@@ -61,50 +61,45 @@ namespace Projeto01.Repositórios
                     break;
 
             }
-            conn.Close();
+            conn.CloseConnection();
         }
 
         public UserManager Get(string email, string senha)
         {
-            // Cria o obejto da conexão, define o local da conexão, abre a conexão
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server=LocalHost; Database=LCP-bidding;UID=sa;PWD=Ped9922.;";
-            conn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand comand = new SqlCommand();
-            comand.Connection = conn;
-            comand.CommandText =
+            string query =
                 "SELECT * " +
                 "FROM Usuarios " +
                 "WHERE Email = '" + email + "' and Senha = '" + senha + "'";
-            SqlDataReader dr = comand.ExecuteReader();
+            conn.ExecuteQuery(query);
+
             List<UserManager> LU = new List<UserManager>();
 
             UserManager u = null;
-            while (dr.Read())
+            while (conn.dr.Read())
             {
                 u = new UserManager();
-                u.Nome = dr[1].ToString();
-                u.Email= dr[2].ToString();
-                u.Senha = dr[3].ToString();
-                u.Cadastro = DateTime.Parse(dr[4].ToString());
-                if (!(dr[6] is System.DBNull))
-                      u.Imagem = (byte[])dr[6];
+                u.Nome = conn.dr[1].ToString();
+                u.Email= conn.dr[2].ToString();
+                u.Senha =conn. dr[3].ToString();
+                u.Cadastro = DateTime.Parse(conn.dr[4].ToString());
+                if (!(conn.dr[6] is System.DBNull))
+                      u.Imagem = (byte[])conn.dr[6];
                 LU.Add(u);
             }
-            conn.Close();
+            conn.CloseConnection();
             return u;
         }
 
         public UserManager RecuperaEmail(string email)
         {
-            // Cria o obejto da conexão, define o local da conexão, abre a conexão
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server=LocalHost; Database=LCP-bidding;UID=sa;PWD=Ped9922.;";
-            conn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
             SqlCommand comand = new SqlCommand();
-            comand.Connection = conn;
+            comand.Connection = conn.OpenConnection();
             comand.CommandText =
                 "SELECT * " +
                 "FROM Usuarios " +
@@ -121,7 +116,7 @@ namespace Projeto01.Repositórios
                 LU.Add(u);
             }
 
-            conn.Close();
+            conn.CloseConnection();
             return u;
         }
     }

@@ -10,11 +10,11 @@ namespace Projeto01.Repositórios
 {
     internal class RepositorioMarcas:IRepositorio<Marcas>
     {
+        Conexao conn = null;
         public void Add(Marcas obj)
         {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
-            cn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;
@@ -25,9 +25,8 @@ namespace Projeto01.Repositórios
         }
         public void Delete(Marcas obj)
         {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
-            cn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;
@@ -37,9 +36,8 @@ namespace Projeto01.Repositórios
         }
         public void Update(Marcas obj)
         {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
-            cn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
             SqlCommand cd = new SqlCommand();
             cd.Connection = cn;

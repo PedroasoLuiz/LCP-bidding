@@ -1,6 +1,7 @@
 ﻿using Projeto01.Model;
 using Projeto01.Repositórios;
 using System;
+using MongoDB.Driver;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,10 @@ namespace Projeto01
         public frmLogin()
         {
             InitializeComponent();
+
         }
+
+
 
         //Instancia dos forms
         frmPrincipal frmPrin = new frmPrincipal();

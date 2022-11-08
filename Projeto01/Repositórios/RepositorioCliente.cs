@@ -11,49 +11,49 @@ namespace Projeto01.Repositórios
 {
     internal class RepositorioCliente : IRepositorio<Cliente>
     {
+        Conexao conn = null;
         public void Add(Cliente obj)
         {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
-            cn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = $"Insert into Cliente" +
-                $"set codCliente = {obj.CodCliente}, nome = {obj.Nome}, " +
-                $"cidade = {obj.Cidade}, estado = {obj.Estado}";
-            cd.ExecuteNonQuery();
+            // Define a query a ser executada
+            string Query = 
+                $"INSERT INTO Cliente " +
+                $"SET codCliente = {obj.CodCliente}, Nome = {obj.Nome}, " +
+                $"Cidade = {obj.Cidade}, Estado = {obj.Estado}";
 
-            MessageBox.Show($"{obj.Nome} cadastrado com sucesso!");
-            cn.Close();
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
+
         }
 
         public void Delete(Cliente obj)
         {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
-            cn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = $"Delete Cliente where idCliente= {obj.IdCliente}";
-            cd.ExecuteNonQuery();
-            cn.Close();
+            // Define a query a ser executada
+            string Query =
+                $"DELETE Cliente WHERE idCliente= {obj.IdCliente}";
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
         }
 
         public void Update(Cliente obj)
         {
-            SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=.\\SQLEXPRESS;Database=LCP;UID=sa;PWD=123;";
-            cn.Open();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
-            SqlCommand cd = new SqlCommand();
-            cd.Connection = cn;
-            cd.CommandText = $"Update Cliente " +
-                             $"set nome = {obj.Nome}, cidade = {obj.Cidade}, estado ={obj.Estado}"+
-                             $"where idCliente = {obj.IdCliente};";
-            cd.ExecuteNonQuery();
-            cn.Close();
+            // Define a query a ser executada
+            string Query = 
+                $"UPDATE Cliente " +
+                $"SET nome = {obj.Nome}, cidade = {obj.Cidade}, estado ={obj.Estado} "+
+                $"WHERE idCliente = {obj.IdCliente} ";
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
 
         }
     }
