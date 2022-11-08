@@ -19,18 +19,13 @@ namespace Projeto01.Repositórios
 
             // Define a query a ser executada
             string Query = 
-                $"INSERT INTO Cliente" +
+                $"INSERT INTO Cliente " +
                 $"SET codCliente = {obj.CodCliente}, Nome = {obj.Nome}, " +
                 $"Cidade = {obj.Cidade}, Estado = {obj.Estado}";
-            
-            // Executa a query
-            conn.ExecuteQuery(Query);
 
-            MessageBox.Show($"{obj.Nome} cadastrado com sucesso!");
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
 
-            // Finzaliza a conexão
-            conn.CloseConnection();
-           
         }
 
         public void Delete(Cliente obj)
@@ -41,8 +36,9 @@ namespace Projeto01.Repositórios
             // Define a query a ser executada
             string Query =
                 $"DELETE Cliente WHERE idCliente= {obj.IdCliente}";
-            conn.ExecuteQuery(Query);
-            conn.CloseConnection();
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
         }
 
         public void Update(Cliente obj)
@@ -53,10 +49,11 @@ namespace Projeto01.Repositórios
             // Define a query a ser executada
             string Query = 
                 $"UPDATE Cliente " +
-                $"SET nome = {obj.Nome}, cidade = {obj.Cidade}, estado ={obj.Estado}"+
-                $"WHERE idCliente = {obj.IdCliente};";
-            conn.ExecuteQuery(Query);
-            conn.CloseConnection();
+                $"SET nome = {obj.Nome}, cidade = {obj.Cidade}, estado ={obj.Estado} "+
+                $"WHERE idCliente = {obj.IdCliente} ";
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
 
         }
     }

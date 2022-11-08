@@ -19,8 +19,8 @@ namespace Projeto01.Repositórios
         Conexao conn = null;
         public void acoes(UserManager Usuario)
         {
-            conn = new Conexao();
-            conn.OpenConnection();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn.OpenConnection();
@@ -66,9 +66,9 @@ namespace Projeto01.Repositórios
 
         public UserManager Get(string email, string senha)
         {
-            conn = new Conexao();
-            conn.OpenConnection();
-            
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
+
             string query =
                 "SELECT * " +
                 "FROM Usuarios " +
@@ -95,8 +95,8 @@ namespace Projeto01.Repositórios
 
         public UserManager RecuperaEmail(string email)
         {
-            conn = new Conexao();
-            conn.OpenConnection();
+            conn = new Conexao();               // Chama a classe conexão
+            conn.OpenConnection();              // Abre a conexão
 
             SqlCommand comand = new SqlCommand();
             comand.Connection = conn.OpenConnection();
