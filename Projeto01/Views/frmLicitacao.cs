@@ -32,19 +32,14 @@ namespace Projeto01.Views
             L.Tipo = txtTipoLic.Texts;
 
             cmbCliente.AutoCompleteSource = AutoCompleteSource.ListItems;
-            L.FkCliente = int.Parse(cmbCliente.ValueMember);
-
-            
-
+            L.FkCliente = int.Parse(cmbCliente.ValueMember);   
         }
 
         private void frmLicitacao_Load(object sender, EventArgs e)
         {
-            frmPrincipal frmPrin = new frmPrincipal();
-            this.Top = frmPrin.Top + 6;
-            this.Width = ActiveForm.Width - 208;
-            this.Height = ActiveForm.Height - 6;
-            this.Left = frmPrin.Left + 208;
+            cmbCliente.DataSource = RL.GetAll();
+            cmbCliente.DisplayMember = "nome"; // Pedrin conf se o nome na tabela é nome
+            cmbCliente.ValueMember = "idCliente"; // conf se o nome na tabela é IdCliente
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

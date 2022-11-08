@@ -134,7 +134,6 @@
             this.txtTipoLic.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoLic.BorderRadius = 5;
             this.txtTipoLic.BorderSize = 1;
-            this.txtTipoLic.Enabled = false;
             this.txtTipoLic.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipoLic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoLic.Location = new System.Drawing.Point(206, 299);

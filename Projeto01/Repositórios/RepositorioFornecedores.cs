@@ -37,6 +37,12 @@ namespace Projeto01.Repositórios
             conn.CloseConnection();             // Encerra conexão
 
         }
+
+        public IEnumerable<Fornecedores> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Fornecedores obj)
         {
             conn = new Conexao();               // Chama a classe conexão

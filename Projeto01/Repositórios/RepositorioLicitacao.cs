@@ -39,6 +39,28 @@ namespace Projeto01.Repositórios
             conn.CloseConnection();             // Encerra conexão
         }
 
+        public IEnumerable<Licitacao> GetAll()
+        {
+            conn = new Conexao();              
+            conn.OpenConnection();
+
+            SqlCommand li = new SqlCommand();
+            li.CommandText = "Select *from Licitacao";
+
+            SqlDataReader dr = li.ExecuteReader();
+            List<Licitacao> Listacao = new List<Licitacao>();
+            while (dr.Read())
+            {
+                Licitacao da = new Licitacao();
+                da.IdLicitacao = int.Parse(dr[0].ToString());
+                da.FkCliente = int.Parse(dr[1].ToString());
+
+                Listacao.Add(da);
+
+            }
+            return Listacao;
+        }
+
         public void Update(Licitacao obj)
         {
             conn = new Conexao();               // Chama a classe conexão

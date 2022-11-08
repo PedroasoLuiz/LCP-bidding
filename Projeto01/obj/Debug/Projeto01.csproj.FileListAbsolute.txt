@@ -44,7 +44,6 @@ C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\RJCodeAdvance.R
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.AssemblyReference.cache
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.SuggestedBindingRedirects.cache
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmPrincipal.resources
-C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmCliente.resources
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmLogin.resources
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.Properties.Resources.resources
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.csproj.GenerateResource.cache
@@ -124,3 +123,41 @@ D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Security.AccessControl.xml
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Security.Principal.Windows.xml
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\mongocrypt.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\DnsClient.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\MongoDB.Bson.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\MongoDB.Driver.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\MongoDB.Libmongocrypt.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\SharpCompress.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Snappier.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Buffers.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Memory.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Security.AccessControl.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\ZstdSharp.dll
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\DnsClient.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\MongoDB.Bson.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\MongoDB.Driver.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\Snappier.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Buffers.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Memory.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Security.AccessControl.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.Views.frmLicitacao.resources
+C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmCadastro.resources

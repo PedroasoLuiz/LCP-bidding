@@ -37,6 +37,12 @@ namespace Projeto01.Repositórios
             conn.ExecuteQuery(Query);
             conn.CloseConnection();
         }
+
+        public IEnumerable<Mapa> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Mapa obj)
         {
             conn = new Conexao();               // Chama a classe conexão
