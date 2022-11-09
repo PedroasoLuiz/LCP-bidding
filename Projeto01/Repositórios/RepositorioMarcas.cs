@@ -35,6 +35,12 @@ namespace Projeto01.Repositórios
             conn.ExecuteQuery(Query);           // Executa a query
             conn.CloseConnection();             // Encerra conexão
         }
+
+        public IEnumerable<Marcas> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Marcas obj)
         {
             conn = new Conexao();               // Chama a classe conexão
