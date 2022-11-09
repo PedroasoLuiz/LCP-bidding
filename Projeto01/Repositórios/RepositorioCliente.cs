@@ -11,11 +11,10 @@ namespace Projeto01.Repositórios
 {
     internal class RepositorioCliente : IRepositorio<Cliente>
     {
-        Conexao conn = null;
+        Conexao conn = new Conexao();
         public void Add(Cliente obj)
         {
-            conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
+           // conn = new Conexao();               // Chama a classe conexão
 
             // Define a query a ser executada
             string Query = 
@@ -30,7 +29,6 @@ namespace Projeto01.Repositórios
         public void Delete(Cliente obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             // Define a query a ser executada
             string Query =
@@ -43,7 +41,6 @@ namespace Projeto01.Repositórios
         public void Update(Cliente obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             // Define a query a ser executada
             string Query = 

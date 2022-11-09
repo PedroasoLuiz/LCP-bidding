@@ -20,8 +20,8 @@ namespace Projeto01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLicitacao());
-           // Application.Run(new frmLogin());
+           // Application.Run(new frmLicitacao());
+            Application.Run(new frmLogin());
             cn = new SqlConnection();
             cn.ConnectionString = "Server=LocalHost; Database=LCP;UID=sa;PWD=123;";
 

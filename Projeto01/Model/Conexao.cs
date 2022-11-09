@@ -12,13 +12,14 @@ namespace Projeto01.Model
     class Conexao
     {
         private string string_conexao = "Server=LocalHost; Database=LCP;UID=sa;PWD=123;";
-        private int op;
-        public int Op { get => op; set => op = value; }
+
         public SqlConnection cn = null;
         public SqlCommand comand = null;
         public SqlDataReader dr = null;
+
         public Conexao()
         {
+            //OpenConnection();
             
         }
 
@@ -37,9 +38,8 @@ namespace Projeto01.Model
 
         public void ExecuteQuery(string Query)
         {
-           
             comand = new SqlCommand();
-            comand.Connection = OpenConnection();
+            comand.Connection = cn;
             comand.CommandText = Query;
             comand.ExecuteNonQuery();
             dr = comand.ExecuteReader();

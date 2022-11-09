@@ -124,3 +124,4 @@ D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Security.AccessControl.xml
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Security.Principal.Windows.xml
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.Views.frmLicitacao.resources

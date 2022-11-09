@@ -40,11 +40,11 @@ namespace Projeto01.Views
 
         private void frmLicitacao_Load(object sender, EventArgs e)
         {
-            frmPrincipal frmPrin = new frmPrincipal();
-            this.Top = frmPrin.Top + 6;
-            this.Width = ActiveForm.Width - 208;
-            this.Height = ActiveForm.Height - 6;
-            this.Left = frmPrin.Left + 208;
+            //frmPrincipal frmPrin = new frmPrincipal();
+            //this.Top = frmPrin.Top + 6;
+            //this.Width = ActiveForm.Width - 208;
+            //this.Height = ActiveForm.Height - 6;
+            //this.Left = frmPrin.Left + 208;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

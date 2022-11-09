@@ -46,10 +46,9 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.panel6.Location = new System.Drawing.Point(-73, 108);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(-49, 70);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(688, 3);
+            this.panel6.Size = new System.Drawing.Size(459, 2);
             this.panel6.TabIndex = 22;
             // 
             // panel2
@@ -57,20 +56,18 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(-73, 110);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(-49, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1182, 2);
+            this.panel2.Size = new System.Drawing.Size(788, 1);
             this.panel2.TabIndex = 21;
             // 
             // lbCadastros
             // 
             this.lbCadastros.AutoSize = true;
             this.lbCadastros.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCadastros.Location = new System.Drawing.Point(30, 53);
-            this.lbCadastros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCadastros.Location = new System.Drawing.Point(20, 34);
             this.lbCadastros.Name = "lbCadastros";
-            this.lbCadastros.Size = new System.Drawing.Size(149, 36);
+            this.lbCadastros.Size = new System.Drawing.Size(94, 22);
             this.lbCadastros.TabIndex = 25;
             this.lbCadastros.Text = "Licitação";
             // 
@@ -80,10 +77,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 252);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 15, 4, 15);
+            this.label1.Location = new System.Drawing.Point(107, 164);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 21);
+            this.label1.Size = new System.Drawing.Size(21, 16);
             this.label1.TabIndex = 28;
             this.label1.Text = "ID:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -97,15 +94,15 @@
             this.txtIDlic.BorderSize = 1;
             this.txtIDlic.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDlic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIDlic.Location = new System.Drawing.Point(206, 246);
-            this.txtIDlic.Margin = new System.Windows.Forms.Padding(15, 15, 8, 15);
+            this.txtIDlic.Location = new System.Drawing.Point(137, 160);
+            this.txtIDlic.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
             this.txtIDlic.Multiline = false;
             this.txtIDlic.Name = "txtIDlic";
-            this.txtIDlic.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.txtIDlic.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.txtIDlic.PasswordChar = false;
             this.txtIDlic.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtIDlic.PlaceholderText = "";
-            this.txtIDlic.Size = new System.Drawing.Size(123, 36);
+            this.txtIDlic.Size = new System.Drawing.Size(82, 26);
             this.txtIDlic.TabIndex = 27;
             this.txtIDlic.Texts = "";
             this.txtIDlic.UnderlinedStyle = false;
@@ -116,10 +113,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNome.AutoSize = true;
             this.lbNome.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNome.Location = new System.Drawing.Point(55, 303);
-            this.lbNome.Margin = new System.Windows.Forms.Padding(4, 15, 4, 15);
+            this.lbNome.Location = new System.Drawing.Point(37, 197);
+            this.lbNome.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(132, 21);
+            this.lbNome.Size = new System.Drawing.Size(85, 16);
             this.lbNome.TabIndex = 30;
             this.lbNome.Text = "Tipo Licitação:";
             this.lbNome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,20 +131,19 @@
             this.txtTipoLic.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTipoLic.BorderRadius = 5;
             this.txtTipoLic.BorderSize = 1;
-            this.txtTipoLic.Enabled = false;
             this.txtTipoLic.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipoLic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTipoLic.Location = new System.Drawing.Point(206, 299);
-            this.txtTipoLic.Margin = new System.Windows.Forms.Padding(15, 15, 8, 15);
-            this.txtTipoLic.MaximumSize = new System.Drawing.Size(1800, 0);
-            this.txtTipoLic.MinimumSize = new System.Drawing.Size(339, 0);
+            this.txtTipoLic.Location = new System.Drawing.Point(137, 194);
+            this.txtTipoLic.Margin = new System.Windows.Forms.Padding(10, 10, 5, 10);
+            this.txtTipoLic.MaximumSize = new System.Drawing.Size(1200, 0);
+            this.txtTipoLic.MinimumSize = new System.Drawing.Size(226, 0);
             this.txtTipoLic.Multiline = false;
             this.txtTipoLic.Name = "txtTipoLic";
-            this.txtTipoLic.Padding = new System.Windows.Forms.Padding(10, 6, 10, 6);
+            this.txtTipoLic.Padding = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.txtTipoLic.PasswordChar = false;
             this.txtTipoLic.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTipoLic.PlaceholderText = "";
-            this.txtTipoLic.Size = new System.Drawing.Size(375, 36);
+            this.txtTipoLic.Size = new System.Drawing.Size(250, 26);
             this.txtTipoLic.TabIndex = 29;
             this.txtTipoLic.Texts = "";
             this.txtTipoLic.UnderlinedStyle = false;
@@ -158,10 +154,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(583, 261);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 15, 4, 15);
+            this.label2.Location = new System.Drawing.Point(389, 170);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 21);
+            this.label2.Size = new System.Drawing.Size(38, 16);
             this.label2.TabIndex = 31;
             this.label2.Text = "Data:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -171,10 +167,11 @@
             this.dataLic.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dataLic.BorderSize = 0;
             this.dataLic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dataLic.Location = new System.Drawing.Point(587, 299);
-            this.dataLic.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dataLic.Location = new System.Drawing.Point(391, 194);
+            this.dataLic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataLic.MinimumSize = new System.Drawing.Size(4, 35);
             this.dataLic.Name = "dataLic";
-            this.dataLic.Size = new System.Drawing.Size(403, 35);
+            this.dataLic.Size = new System.Drawing.Size(270, 35);
             this.dataLic.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
             this.dataLic.TabIndex = 32;
             this.dataLic.TextColor = System.Drawing.Color.White;
@@ -185,10 +182,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 374);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 15, 4, 15);
+            this.label3.Location = new System.Drawing.Point(73, 243);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 21);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 34;
             this.label3.Text = "Cliente:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -205,10 +202,9 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(664, 598);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSalvar.Location = new System.Drawing.Point(443, 389);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(156, 49);
+            this.btnSalvar.Size = new System.Drawing.Size(104, 32);
             this.btnSalvar.TabIndex = 37;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextColor = System.Drawing.Color.White;
@@ -227,10 +223,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(822, 598);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelar.Location = new System.Drawing.Point(548, 389);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(156, 49);
+            this.btnCancelar.Size = new System.Drawing.Size(104, 32);
             this.btnCancelar.TabIndex = 36;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
@@ -248,19 +243,20 @@
             this.cmbCliente.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbCliente.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cmbCliente.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbCliente.Location = new System.Drawing.Point(206, 362);
-            this.cmbCliente.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbCliente.Location = new System.Drawing.Point(137, 235);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCliente.MinimumSize = new System.Drawing.Size(133, 20);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Padding = new System.Windows.Forms.Padding(3);
-            this.cmbCliente.Size = new System.Drawing.Size(304, 51);
+            this.cmbCliente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCliente.Size = new System.Drawing.Size(203, 41);
             this.cmbCliente.TabIndex = 38;
             this.cmbCliente.Texts = "";
             // 
             // frmLicitacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 880);
+            this.ClientSize = new System.Drawing.Size(691, 512);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
@@ -275,6 +271,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLicitacao";
             this.Text = "frmLicitacao";
             this.Load += new System.EventHandler(this.frmLicitacao_Load);

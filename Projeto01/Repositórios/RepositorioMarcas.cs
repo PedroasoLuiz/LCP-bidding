@@ -15,7 +15,6 @@ namespace Projeto01.Repositórios
         public void Add(Marcas obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string Query =
                 "INSERT INTO Marcas (nome)" +
@@ -28,9 +27,8 @@ namespace Projeto01.Repositórios
         public void Delete(Marcas obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
-           string Query = 
+            string Query = 
                 $"DELETE Marcas " +
                 $"WHERE idMarcas= {obj.IdMarca}";
 
@@ -40,7 +38,6 @@ namespace Projeto01.Repositórios
         public void Update(Marcas obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
            string Query = 
                 $"UPDATE Marcas " +

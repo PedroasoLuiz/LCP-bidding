@@ -15,7 +15,6 @@ namespace Projeto01.Repositórios
         public void Add(Mapa obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string Query =
                 "INSERT INTO Mapa (PrecoMax, PrecoMin, Quantidade, Unidade, fkProduto, ValorFinal, fkFornecedor, fkLicitacao) " +
@@ -29,18 +28,17 @@ namespace Projeto01.Repositórios
         public void Delete(Mapa obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string Query =
                 $"DELETE Mapa " +
                 $"WHERE idCliente= {obj.IdMapa}";
+
             conn.ExecuteQuery(Query);
             conn.CloseConnection();
         }
         public void Update(Mapa obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string Query = 
                 $"UPDATE Mapa " +
