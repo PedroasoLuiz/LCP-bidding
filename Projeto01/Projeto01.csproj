@@ -203,6 +203,12 @@
     <Compile Include="Views\frmLicitacao.Designer.cs">
       <DependentUpon>frmLicitacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmMapa.Designer.cs">
+      <DependentUpon>frmMapa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Views\frmLicitacao.resx">
       <DependentUpon>frmLicitacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmMapa.resx">
+      <DependentUpon>frmMapa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
