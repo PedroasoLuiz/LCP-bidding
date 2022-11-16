@@ -6,59 +6,104 @@ using System.Threading.Tasks;
 using Projeto01.Model;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections;
+using DnsClient.Protocol;
 
 namespace Projeto01.Repositórios
 {
     internal class RepositorioCliente : IRepositorio<Cliente>
     {
-        Conexao conn = null;
+        // Método de cadastro de clientes   
         public void Add(Cliente obj)
         {
-            conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
+            Conexao conn = new Conexao();
+            string Query =
+                $"EXEC Cliente_Cadastro " +
+                $"{obj.CodCliente}, " +
+                $"'{obj.Nome.ToUpper()}', " +
+                $"'{obj.Cidade.ToUpper()}', " +
+                $"'{obj.Estado.ToUpper()}' ";
 
+            conn.ExecuteQuery(Query);
+            conn.CloseConnection();             // Encerra conexão
+
+        }
+
+        
+        // Método de exclusão de clientes
+        public void Delete(Cliente obj)
+        {
+            Conexao conn = new Conexao();
             // Define a query a ser executada
-            string Query = 
-                $"INSERT INTO Cliente (codCliente,Nome,Cidade,Estado) " +
-                $"VALUES ('{obj.CodCliente}','{obj.Nome}','{obj.Cidade}','{obj.Estado}')";
+            string Query =
+                $"EXEC Cliente_Exclui " +
+                $"{obj.IdCliente} ";
+
+            conn.ExecuteQuery(Query);           // Executa a query
+            conn.CloseConnection();             // Encerra conexão
+        }
+
+        
+        // Método de atualização de informaç~es de clientes
+        public void Update(Cliente obj)
+        {
+            Conexao conn = new Conexao();
+            // Define a query a ser executada
+            string Query =
+                $"EXEC Cliente_Update " +
+                $"{obj.IdCliente}, " +
+                $"{obj.CodCliente}, " +
+                $"'{obj.Nome.ToUpper()}', " +
+                $"'{obj.Cidade.ToUpper()}', " +
+                $"'{obj.Estado.ToUpper()}' ";
 
             conn.ExecuteQuery(Query);           // Executa a query
             conn.CloseConnection();             // Encerra conexão
 
         }
 
-        public void Delete(Cliente obj)
+        public Cliente BuscaID(int find)
         {
-            conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
+            Conexao conn = new Conexao();
+            conn.ExecuteQuery($"EXEC Cliente_BuscaID {find}");
+            Cliente c = new Cliente();
 
-            // Define a query a ser executada
-            string Query =
-                $"DELETE Cliente WHERE idCliente = {obj.IdCliente}";
-
-            conn.ExecuteQuery(Query);           // Executa a query
-            conn.CloseConnection();             // Encerra conexão
+            while (conn.dr.Read())
+            {
+                c.IdCliente = int.Parse(conn.dr[0].ToString());
+                c.CodCliente = int.Parse(conn.dr[1].ToString());
+                c.Nome = conn.dr[2].ToString();
+                c.Cidade = conn.dr[3].ToString();
+                c.Estado = conn.dr[4].ToString();
+            }
+            if (c == null)
+                MessageBox.Show("Cliente não encontrado!");
+      
+            conn.CloseConnection();
+            return c;
         }
 
         public IEnumerable<Cliente> GetAll()
         {
-            throw new NotImplementedException();
-        }
+            Conexao conn = new Conexao();
+            conn.ExecuteQuery("EXEC Cliente_BuscaGeral");
+            List<Cliente> lc = new List<Cliente>();
 
-        public void Update(Cliente obj)
-        {
-            conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
+            while (conn.dr.Read())
+            {
+                Cliente c = new Cliente();
+                c.IdCliente = int.Parse(conn.dr[0].ToString());
+                c.CodCliente = int.Parse(conn.dr[1].ToString());
+                c.Nome = conn.dr[2].ToString();
+                c.Cidade = conn.dr[3].ToString();
+                c.Estado = conn.dr[4].ToString();
 
-            // Define a query a ser executada
-            string Query = 
-                $"UPDATE Cliente " +
-                $"SET Nome = {obj.Nome}, Cidade = {obj.Cidade}, Estado ={obj.Estado} "+
-                $"WHERE idCliente = {obj.IdCliente} ";
+                lc.Add(c);
+            }
 
-            conn.ExecuteQuery(Query);           // Executa a query
-            conn.CloseConnection();             // Encerra conexão
-
+            conn.CloseConnection();
+            //lc.Sort();
+            return lc;
         }
     }
 }

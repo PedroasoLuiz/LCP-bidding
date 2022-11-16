@@ -15,7 +15,6 @@ namespace Projeto01.Repositórios
         public void Add(Licitacao obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string Query =
                 "INSERT INTO Licitacao (codLicitacao,Tipo,Data, fkCliente) " +
@@ -29,7 +28,6 @@ namespace Projeto01.Repositórios
         public void Delete(Licitacao obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string Query = 
                  "DELETE Licitacao " +
@@ -64,7 +62,6 @@ namespace Projeto01.Repositórios
         public void Update(Licitacao obj)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string Query =
                 $"UPDATE Licitacao " +

@@ -67,7 +67,6 @@ namespace Projeto01.Repositórios
         public UserManager Get(string email, string senha)
         {
             conn = new Conexao();               // Chama a classe conexão
-            conn.OpenConnection();              // Abre a conexão
 
             string query =
                 "SELECT * " +
