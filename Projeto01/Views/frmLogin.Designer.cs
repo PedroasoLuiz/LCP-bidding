@@ -33,7 +33,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -43,26 +42,31 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnChamaLogin = new RJCodeAdvance.RJControls.RJButton();
+            this.btnSairC = new System.Windows.Forms.Button();
+            this.btnImage = new CustomControls.RJControls.RJButton();
+            this.btnCadastrar = new RJCodeAdvance.RJControls.RJButton();
+            this.picNewPicture = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnChamaLogin = new System.Windows.Forms.Button();
             this.txtCadastrarSenha = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtCadastrarEmail = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.txtCadastrarNome = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tabLogin = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnChamaCadastro = new RJCodeAdvance.RJControls.RJButton();
+            this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
+            this.btnSairL = new System.Windows.Forms.Button();
             this.lbAlert = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnChamaCadastro = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.txtLoginSenha = new System.Windows.Forms.TextBox();
             this.txtLoginEmail = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -89,15 +93,12 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.picNewPicture = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.btnImage = new CustomControls.RJControls.RJButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnSairC = new System.Windows.Forms.Button();
-            this.btnSairL = new System.Windows.Forms.Button();
             this.tabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNewPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.tabLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
@@ -106,7 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picNewPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCadastro
@@ -115,7 +115,6 @@
             this.tabCadastro.Controls.Add(this.pictureBox6);
             this.tabCadastro.Controls.Add(this.label15);
             this.tabCadastro.Controls.Add(this.label16);
-            this.tabCadastro.Controls.Add(this.pictureBox7);
             this.tabCadastro.Controls.Add(this.panel12);
             this.tabCadastro.Controls.Add(this.label17);
             this.tabCadastro.Controls.Add(this.label18);
@@ -125,6 +124,7 @@
             this.tabCadastro.Controls.Add(this.panel13);
             this.tabCadastro.Controls.Add(this.label22);
             this.tabCadastro.Controls.Add(this.panel9);
+            this.tabCadastro.Controls.Add(this.pictureBox7);
             this.tabCadastro.Location = new System.Drawing.Point(4, 22);
             this.tabCadastro.Name = "tabCadastro";
             this.tabCadastro.Padding = new System.Windows.Forms.Padding(3);
@@ -165,16 +165,6 @@
             this.label16.TabIndex = 14;
             this.label16.Text = "Entre em contato pelo: suporte@lcpgroup.com.br";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Projeto01.Properties.Resources.engrangem2;
-            this.pictureBox7.Location = new System.Drawing.Point(393, 25);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(138, 123);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 17;
-            this.pictureBox7.TabStop = false;
             // 
             // panel12
             // 
@@ -271,15 +261,15 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.btnChamaLogin);
             this.panel9.Controls.Add(this.btnSairC);
             this.panel9.Controls.Add(this.btnImage);
+            this.panel9.Controls.Add(this.btnCadastrar);
             this.panel9.Controls.Add(this.picNewPicture);
             this.panel9.Controls.Add(this.label23);
             this.panel9.Controls.Add(this.label13);
             this.panel9.Controls.Add(this.label14);
-            this.panel9.Controls.Add(this.btnChamaLogin);
             this.panel9.Controls.Add(this.txtCadastrarSenha);
-            this.panel9.Controls.Add(this.btnCadastrar);
             this.panel9.Controls.Add(this.txtCadastrarEmail);
             this.panel9.Controls.Add(this.panel14);
             this.panel9.Controls.Add(this.txtCadastrarNome);
@@ -289,6 +279,98 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(379, 490);
             this.panel9.TabIndex = 1;
+            // 
+            // btnChamaLogin
+            // 
+            this.btnChamaLogin.BackColor = System.Drawing.Color.White;
+            this.btnChamaLogin.BackgroundColor = System.Drawing.Color.White;
+            this.btnChamaLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnChamaLogin.BorderRadius = 5;
+            this.btnChamaLogin.BorderSize = 1;
+            this.btnChamaLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChamaLogin.FlatAppearance.BorderSize = 0;
+            this.btnChamaLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChamaLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChamaLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnChamaLogin.Location = new System.Drawing.Point(64, 401);
+            this.btnChamaLogin.Name = "btnChamaLogin";
+            this.btnChamaLogin.Size = new System.Drawing.Size(250, 36);
+            this.btnChamaLogin.TabIndex = 11;
+            this.btnChamaLogin.Text = "Login";
+            this.btnChamaLogin.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnChamaLogin.UseVisualStyleBackColor = false;
+            this.btnChamaLogin.Click += new System.EventHandler(this.btnChamaLogin_Click_1);
+            // 
+            // btnSairC
+            // 
+            this.btnSairC.BackColor = System.Drawing.Color.White;
+            this.btnSairC.FlatAppearance.BorderSize = 0;
+            this.btnSairC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSairC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSairC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSairC.Location = new System.Drawing.Point(62, 438);
+            this.btnSairC.Name = "btnSairC";
+            this.btnSairC.Size = new System.Drawing.Size(252, 29);
+            this.btnSairC.TabIndex = 8;
+            this.btnSairC.Text = "Sair";
+            this.btnSairC.UseVisualStyleBackColor = false;
+            this.btnSairC.Click += new System.EventHandler(this.btnSairC_Click);
+            // 
+            // btnImage
+            // 
+            this.btnImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnImage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnImage.BorderColor = System.Drawing.Color.White;
+            this.btnImage.BorderRadius = 10;
+            this.btnImage.BorderSize = 0;
+            this.btnImage.FlatAppearance.BorderSize = 0;
+            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImage.ForeColor = System.Drawing.Color.White;
+            this.btnImage.Location = new System.Drawing.Point(141, 146);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(88, 23);
+            this.btnImage.TabIndex = 7;
+            this.btnImage.Text = "Upload";
+            this.btnImage.TextColor = System.Drawing.Color.White;
+            this.btnImage.UseVisualStyleBackColor = false;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnCadastrar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnCadastrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnCadastrar.BorderRadius = 5;
+            this.btnCadastrar.BorderSize = 0;
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(63, 364);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(252, 36);
+            this.btnCadastrar.TabIndex = 12;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextColor = System.Drawing.Color.White;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_1);
+            // 
+            // picNewPicture
+            // 
+            this.picNewPicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.picNewPicture.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.picNewPicture.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.picNewPicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.picNewPicture.BorderSize = 2;
+            this.picNewPicture.GradientAngle = 50F;
+            this.picNewPicture.Location = new System.Drawing.Point(121, 18);
+            this.picNewPicture.Name = "picNewPicture";
+            this.picNewPicture.Size = new System.Drawing.Size(128, 128);
+            this.picNewPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picNewPicture.TabIndex = 6;
+            this.picNewPicture.TabStop = false;
             // 
             // label23
             // 
@@ -323,20 +405,6 @@
             this.label14.TabIndex = 5;
             this.label14.Text = "Nome:";
             // 
-            // btnChamaLogin
-            // 
-            this.btnChamaLogin.BackColor = System.Drawing.Color.White;
-            this.btnChamaLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChamaLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChamaLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.btnChamaLogin.Location = new System.Drawing.Point(62, 404);
-            this.btnChamaLogin.Name = "btnChamaLogin";
-            this.btnChamaLogin.Size = new System.Drawing.Size(252, 29);
-            this.btnChamaLogin.TabIndex = 4;
-            this.btnChamaLogin.Text = "Login";
-            this.btnChamaLogin.UseVisualStyleBackColor = false;
-            this.btnChamaLogin.Click += new System.EventHandler(this.btnChamaLogin_Click);
-            // 
             // txtCadastrarSenha
             // 
             this.txtCadastrarSenha.BackColor = System.Drawing.Color.White;
@@ -344,25 +412,11 @@
             this.txtCadastrarSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCadastrarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCadastrarSenha.Location = new System.Drawing.Point(67, 333);
+            this.txtCadastrarSenha.MaxLength = 8;
             this.txtCadastrarSenha.Name = "txtCadastrarSenha";
             this.txtCadastrarSenha.Size = new System.Drawing.Size(244, 16);
             this.txtCadastrarSenha.TabIndex = 3;
             this.txtCadastrarSenha.UseSystemPasswordChar = true;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(62, 372);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(251, 29);
-            this.btnCadastrar.TabIndex = 1;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtCadastrarEmail
             // 
@@ -410,6 +464,16 @@
             this.panel11.Size = new System.Drawing.Size(250, 1);
             this.panel11.TabIndex = 1;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Projeto01.Properties.Resources.engrangem2;
+            this.pictureBox7.Location = new System.Drawing.Point(393, 25);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(138, 123);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 17;
+            this.pictureBox7.TabStop = false;
+            // 
             // tabLogin
             // 
             this.tabLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
@@ -447,13 +511,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnChamaCadastro);
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnSairL);
             this.panel1.Controls.Add(this.lbAlert);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnChamaCadastro);
-            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtLoginSenha);
             this.panel1.Controls.Add(this.txtLoginEmail);
             this.panel1.Controls.Add(this.panel3);
@@ -462,6 +526,63 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 490);
             this.panel1.TabIndex = 0;
+            // 
+            // btnChamaCadastro
+            // 
+            this.btnChamaCadastro.BackColor = System.Drawing.Color.White;
+            this.btnChamaCadastro.BackgroundColor = System.Drawing.Color.White;
+            this.btnChamaCadastro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnChamaCadastro.BorderRadius = 5;
+            this.btnChamaCadastro.BorderSize = 1;
+            this.btnChamaCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChamaCadastro.FlatAppearance.BorderSize = 0;
+            this.btnChamaCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChamaCadastro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChamaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnChamaCadastro.Location = new System.Drawing.Point(62, 392);
+            this.btnChamaCadastro.Name = "btnChamaCadastro";
+            this.btnChamaCadastro.Size = new System.Drawing.Size(250, 36);
+            this.btnChamaCadastro.TabIndex = 10;
+            this.btnChamaCadastro.Text = "Cadastrar";
+            this.btnChamaCadastro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnChamaCadastro.UseVisualStyleBackColor = false;
+            this.btnChamaCadastro.Click += new System.EventHandler(this.btnChamaCadastro_Click_1);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
+            this.btnLogin.BorderRadius = 5;
+            this.btnLogin.BorderSize = 0;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(61, 354);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(252, 36);
+            this.btnLogin.TabIndex = 10;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.TextColor = System.Drawing.Color.White;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnSairL
+            // 
+            this.btnSairL.BackColor = System.Drawing.Color.White;
+            this.btnSairL.FlatAppearance.BorderSize = 0;
+            this.btnSairL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSairL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSairL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSairL.Location = new System.Drawing.Point(62, 434);
+            this.btnSairL.Name = "btnSairL";
+            this.btnSairL.Size = new System.Drawing.Size(252, 29);
+            this.btnSairL.TabIndex = 9;
+            this.btnSairL.Text = "Sair";
+            this.btnSairL.UseVisualStyleBackColor = false;
+            this.btnSairL.Click += new System.EventHandler(this.btnSairL_Click);
             // 
             // lbAlert
             // 
@@ -508,35 +629,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btnChamaCadastro
-            // 
-            this.btnChamaCadastro.BackColor = System.Drawing.Color.White;
-            this.btnChamaCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChamaCadastro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChamaCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.btnChamaCadastro.Location = new System.Drawing.Point(62, 404);
-            this.btnChamaCadastro.Name = "btnChamaCadastro";
-            this.btnChamaCadastro.Size = new System.Drawing.Size(252, 29);
-            this.btnChamaCadastro.TabIndex = 4;
-            this.btnChamaCadastro.Text = "Cadastrar";
-            this.btnChamaCadastro.UseVisualStyleBackColor = false;
-            this.btnChamaCadastro.Click += new System.EventHandler(this.btnChamaCadastro_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(62, 372);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(251, 29);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
-            // 
             // txtLoginSenha
             // 
             this.txtLoginSenha.BackColor = System.Drawing.Color.White;
@@ -544,6 +636,7 @@
             this.txtLoginSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoginSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtLoginSenha.Location = new System.Drawing.Point(67, 288);
+            this.txtLoginSenha.MaxLength = 8;
             this.txtLoginSenha.Name = "txtLoginSenha";
             this.txtLoginSenha.Size = new System.Drawing.Size(244, 16);
             this.txtLoginSenha.TabIndex = 3;
@@ -676,7 +769,6 @@
             this.button4.TabIndex = 1;
             this.button4.Text = "Login";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -828,74 +920,9 @@
             this.tabControl.Size = new System.Drawing.Size(727, 531);
             this.tabControl.TabIndex = 6;
             // 
-            // picNewPicture
-            // 
-            this.picNewPicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.picNewPicture.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.picNewPicture.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.picNewPicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.picNewPicture.BorderSize = 2;
-            this.picNewPicture.GradientAngle = 50F;
-            this.picNewPicture.Location = new System.Drawing.Point(121, 18);
-            this.picNewPicture.Name = "picNewPicture";
-            this.picNewPicture.Size = new System.Drawing.Size(128, 128);
-            this.picNewPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picNewPicture.TabIndex = 6;
-            this.picNewPicture.TabStop = false;
-            // 
-            // btnImage
-            // 
-            this.btnImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.btnImage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.btnImage.BorderColor = System.Drawing.Color.White;
-            this.btnImage.BorderRadius = 10;
-            this.btnImage.BorderSize = 0;
-            this.btnImage.FlatAppearance.BorderSize = 0;
-            this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImage.ForeColor = System.Drawing.Color.White;
-            this.btnImage.Location = new System.Drawing.Point(141, 146);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(88, 23);
-            this.btnImage.TabIndex = 7;
-            this.btnImage.Text = "Upload";
-            this.btnImage.TextColor = System.Drawing.Color.White;
-            this.btnImage.UseVisualStyleBackColor = false;
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnSairC
-            // 
-            this.btnSairC.BackColor = System.Drawing.Color.White;
-            this.btnSairC.FlatAppearance.BorderSize = 0;
-            this.btnSairC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSairC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSairC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSairC.Location = new System.Drawing.Point(62, 438);
-            this.btnSairC.Name = "btnSairC";
-            this.btnSairC.Size = new System.Drawing.Size(252, 29);
-            this.btnSairC.TabIndex = 8;
-            this.btnSairC.Text = "Sair";
-            this.btnSairC.UseVisualStyleBackColor = false;
-            this.btnSairC.Click += new System.EventHandler(this.btnSairC_Click);
-            // 
-            // btnSairL
-            // 
-            this.btnSairL.BackColor = System.Drawing.Color.White;
-            this.btnSairL.FlatAppearance.BorderSize = 0;
-            this.btnSairL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSairL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSairL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSairL.Location = new System.Drawing.Point(62, 434);
-            this.btnSairL.Name = "btnSairL";
-            this.btnSairL.Size = new System.Drawing.Size(252, 29);
-            this.btnSairL.TabIndex = 9;
-            this.btnSairL.Text = "Sair";
-            this.btnSairL.UseVisualStyleBackColor = false;
-            this.btnSairL.Click += new System.EventHandler(this.btnSairL_Click);
             // 
             // frmLogin
             // 
@@ -907,12 +934,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.tabCadastro.ResumeLayout(false);
             this.tabCadastro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNewPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.tabLogin.ResumeLayout(false);
             this.tabLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -924,7 +953,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picNewPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -938,8 +966,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnChamaCadastro;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtLoginSenha;
         private System.Windows.Forms.TextBox txtLoginEmail;
         private System.Windows.Forms.Panel panel3;
@@ -982,9 +1008,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnChamaLogin;
         private System.Windows.Forms.TextBox txtCadastrarSenha;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtCadastrarEmail;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TextBox txtCadastrarNome;
@@ -996,6 +1020,10 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnSairC;
         private System.Windows.Forms.Button btnSairL;
+        private RJCodeAdvance.RJControls.RJButton btnChamaCadastro;
+        private RJCodeAdvance.RJControls.RJButton btnLogin;
+        private RJCodeAdvance.RJControls.RJButton btnChamaLogin;
+        private RJCodeAdvance.RJControls.RJButton btnCadastrar;
     }
 }
 

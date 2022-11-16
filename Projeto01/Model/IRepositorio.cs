@@ -11,6 +11,9 @@ namespace Projeto01.Model
         void  Add(T obj);
         void  Update(T obj);
         void  Delete(T obj);
+
         IEnumerable<T> GetAll();
+
+        //IEnumerable<T> Busca(string find);
     }
 }

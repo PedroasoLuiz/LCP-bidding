@@ -10,14 +10,12 @@ namespace Projeto01.Model
     internal class Fornecedores
     {
         private int idFornecedores;
-        private int codFornecedores;
         private string cidade;
         private string estado;
         private string nome;
         private string tipo;
 
         public int IdFornecedores { get => idFornecedores; set => idFornecedores = value; }
-        public int CodFornecedores { get => codFornecedores; set => codFornecedores = value; }
         public string Cidade { get => cidade; set => cidade = value; }
         public string Estado { get => estado; set => estado = value; }
         public string Nome { get => nome; set => nome = value; }

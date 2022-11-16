@@ -125,3 +125,8 @@ D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Security.Principal.Windows.x
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Faculdade\LCP-bidding\Projeto01\obj\Debug\Projeto01.Views.frmLicitacao.resources
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\Newtonsoft.Json.dll
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\Newtonsoft.Json.xml
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\DllConsultaCNPJ.dll
+D:\Faculdade\LCP-bidding\Projeto01\bin\Debug\DllConsultaCNPJ.pdb

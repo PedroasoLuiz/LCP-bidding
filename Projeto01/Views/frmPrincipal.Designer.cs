@@ -151,7 +151,7 @@
             this.cadastrosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(102, 41);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
-            this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
+    
             // 
             // clientesToolStripMenuItem
             // 
