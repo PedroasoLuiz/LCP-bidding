@@ -171,3 +171,6 @@ C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Text.Enc
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.Views.frmLicitacao.resources
 C:\Users\camil\Desktop\4 PERIODO\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmCadastro.resources
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.Views.frmLicitacao.resources
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.Views.frmMapa.resources
+C:\Users\larip\OneDrive\Documentos\Lari\Aulas\Atv. Exten. IV\LCP-bidding\Projeto01\obj\Debug\Projeto01.frmCadastro.resources

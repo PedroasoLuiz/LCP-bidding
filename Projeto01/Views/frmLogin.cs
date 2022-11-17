@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace Projeto01
 {
@@ -27,9 +29,13 @@ namespace Projeto01
         frmPrincipal frmPrin = new frmPrincipal();
         RepUserManager ru = null;
         UserManager uc = new UserManager();
-
+        MongoClient mongoClient;
+        IMongoDatabase mongoDatabase;
+        IMongoCollection<UserManager> mongoCollection;
         private void btnImage_Click(object sender, EventArgs e)
         {
+            
+
             try
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -116,6 +122,14 @@ namespace Projeto01
                     uc.Email = txtCadastrarEmail.Text.ToLower();
                     uc.Senha = txtCadastrarSenha.Text;
                     uc.Cadastro = DateTime.Now;
+                    uc.Imagem =.... (picNewPicture.Image);
+                    mongoCollection.InsertOne(uc);
+
+                    FilterDefinition<UserManager> filter;
+                    filter = Builders<UserManager>.Filter.Eq("IdUser", uc.IdUser);
+                    UserManager user = (UserManager)mongoCollection.Find(filter).FirstOrDefault();
+                    String m_uid = Convert.ToString(user.IdUser);
+
 
                     ConverteFoto(picNewPicture);
                     ru = new RepUserManager();
@@ -160,6 +174,9 @@ namespace Projeto01
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+            mongoClient = new MongoClient("mongodb + srv://LCP-Licitacoes:<mongo123>@cluster0.hztehbs.mongodb.net/?retryWrites=true&w=majority");
+            mongoDatabase = mongoClient.GetDatabase("LCP-bidding");
+            mongoCollection = mongoDatabase.GetCollection<UserManager>("Cadastro");
         }
     }
 }
