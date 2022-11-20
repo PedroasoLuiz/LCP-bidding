@@ -57,15 +57,18 @@
             this.lbTipo = new System.Windows.Forms.Label();
             this.txtTipo = new RJCodeAdvance.RJControls.RJTextBox();
             this.panelProduto = new System.Windows.Forms.Panel();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
-            this.marcasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.lCPDataSet1 = new Projeto01.LCPDataSet1();
             this.label8 = new System.Windows.Forms.Label();
+            this.nomeComboBox = new System.Windows.Forms.ComboBox();
+            this.marcasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.lCPDataSet = new Projeto01.LCPDataSet();
+            this.marcasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.lCPDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.txtMarca = new RJCodeAdvance.RJControls.RJTextBox();
             this.txtCusto = new RJCodeAdvance.RJControls.RJTextBox();
             this.txtUnid = new RJCodeAdvance.RJControls.RJTextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.marcasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.atvEtiqueta1 = new RJCodeAdvance.RJControls.RJToggleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -80,15 +83,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnCancela = new RJCodeAdvance.RJControls.RJButton();
             this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marcasTableAdapter1 = new Projeto01.LCPDataSet1TableAdapters.MarcasTableAdapter();
             this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.marcasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.marcasTableAdapter = new Projeto01.LCPDataSetTableAdapters.MarcasTableAdapter();
+            this.tableAdapterManager = new Projeto01.LCPDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelProduto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSet1)).BeginInit();
             this.pEtiquetas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -160,7 +169,7 @@
             this.dataGridView1.RowTemplate.Height = 26;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 55);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 55);
             this.dataGridView1.TabIndex = 0;
             // 
             // txtID
@@ -211,7 +220,7 @@
             this.txtNome.PasswordChar = false;
             this.txtNome.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNome.PlaceholderText = "";
-            this.txtNome.Size = new System.Drawing.Size(280, 26);
+            this.txtNome.Size = new System.Drawing.Size(298, 26);
             this.txtNome.TabIndex = 3;
             this.txtNome.Texts = "";
             this.txtNome.UnderlinedStyle = false;
@@ -238,7 +247,7 @@
             this.txtCidade.PasswordChar = false;
             this.txtCidade.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtCidade.PlaceholderText = "";
-            this.txtCidade.Size = new System.Drawing.Size(280, 26);
+            this.txtCidade.Size = new System.Drawing.Size(298, 26);
             this.txtCidade.TabIndex = 5;
             this.txtCidade.Texts = "";
             this.txtCidade.UnderlinedStyle = false;
@@ -402,7 +411,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Location = new System.Drawing.Point(23, 66);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(631, 1);
+            this.panel2.Size = new System.Drawing.Size(649, 1);
             this.panel2.TabIndex = 16;
             // 
             // panel4
@@ -443,7 +452,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(445, 539);
+            this.btnSalvar.Location = new System.Drawing.Point(463, 539);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(104, 32);
             this.btnSalvar.TabIndex = 23;
@@ -538,7 +547,7 @@
             this.txtTipo.PasswordChar = false;
             this.txtTipo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTipo.PlaceholderText = "";
-            this.txtTipo.Size = new System.Drawing.Size(145, 26);
+            this.txtTipo.Size = new System.Drawing.Size(163, 26);
             this.txtTipo.TabIndex = 27;
             this.txtTipo.Texts = "";
             this.txtTipo.UnderlinedStyle = false;
@@ -546,8 +555,8 @@
             // 
             // panelProduto
             // 
-            this.panelProduto.Controls.Add(this.cmbMarca);
             this.panelProduto.Controls.Add(this.label8);
+            this.panelProduto.Controls.Add(this.nomeComboBox);
             this.panelProduto.Controls.Add(this.label5);
             this.panelProduto.Controls.Add(this.txtMarca);
             this.panelProduto.Controls.Add(this.txtCusto);
@@ -558,35 +567,6 @@
             this.panelProduto.Size = new System.Drawing.Size(461, 86);
             this.panelProduto.TabIndex = 29;
             this.panelProduto.Visible = false;
-            // 
-            // cmbMarca
-            // 
-            this.cmbMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbMarca.BackColor = System.Drawing.Color.White;
-            this.cmbMarca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbMarca.DataSource = this.marcasBindingSource1;
-            this.cmbMarca.DisplayMember = "Nome";
-            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(115, 43);
-            this.cmbMarca.MaxDropDownItems = 10;
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(268, 25);
-            this.cmbMarca.TabIndex = 43;
-            this.cmbMarca.ValueMember = "idMarcas";
-            // 
-            // marcasBindingSource1
-            // 
-            this.marcasBindingSource1.DataMember = "Marcas";
-            this.marcasBindingSource1.DataSource = this.lCPDataSet1;
-            // 
-            // lCPDataSet1
-            // 
-            this.lCPDataSet1.DataSetName = "LCPDataSet1";
-            this.lCPDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label8
             // 
@@ -601,6 +581,40 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Marca:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // nomeComboBox
+            // 
+            this.nomeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcasBindingSource3, "Nome", true));
+            this.nomeComboBox.DataSource = this.marcasBindingSource4;
+            this.nomeComboBox.DisplayMember = "Nome";
+            this.nomeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nomeComboBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeComboBox.FormattingEnabled = true;
+            this.nomeComboBox.Location = new System.Drawing.Point(110, 43);
+            this.nomeComboBox.Name = "nomeComboBox";
+            this.nomeComboBox.Size = new System.Drawing.Size(275, 24);
+            this.nomeComboBox.TabIndex = 44;
+            this.nomeComboBox.ValueMember = "idMarcas";
+            // 
+            // marcasBindingSource3
+            // 
+            this.marcasBindingSource3.DataMember = "Marcas";
+            this.marcasBindingSource3.DataSource = this.lCPDataSet;
+            // 
+            // lCPDataSet
+            // 
+            this.lCPDataSet.DataSetName = "LCPDataSet";
+            this.lCPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // marcasBindingSource4
+            // 
+            this.marcasBindingSource4.DataMember = "Marcas";
+            this.marcasBindingSource4.DataSource = this.lCPDataSetBindingSource;
+            // 
+            // lCPDataSetBindingSource
+            // 
+            this.lCPDataSetBindingSource.DataSource = this.lCPDataSet;
+            this.lCPDataSetBindingSource.Position = 0;
             // 
             // label5
             // 
@@ -665,6 +679,7 @@
             this.txtCusto.TabIndex = 5;
             this.txtCusto.Texts = "";
             this.txtCusto.UnderlinedStyle = false;
+            this.txtCusto._TextChanged += new System.EventHandler(this.txtCusto__TextChanged);
             this.txtCusto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCusto_KeyPress);
             // 
             // txtUnid
@@ -751,7 +766,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.Location = new System.Drawing.Point(23, 363);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(631, 1);
+            this.panel3.Size = new System.Drawing.Size(649, 1);
             this.panel3.TabIndex = 32;
             // 
             // label9
@@ -811,7 +826,7 @@
             this.rjTextBox2.PasswordChar = false;
             this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(453, 26);
+            this.rjTextBox2.Size = new System.Drawing.Size(471, 26);
             this.rjTextBox2.TabIndex = 38;
             this.rjTextBox2.Texts = "";
             this.rjTextBox2.UnderlinedStyle = false;
@@ -838,11 +853,10 @@
             this.pEtiquetas.Controls.Add(this.atvEtiqueta1);
             this.pEtiquetas.Controls.Add(this.label2);
             this.pEtiquetas.Controls.Add(this.btnatvEtiqueta1);
-            this.pEtiquetas.Location = new System.Drawing.Point(485, 84);
+            this.pEtiquetas.Location = new System.Drawing.Point(503, 84);
             this.pEtiquetas.Name = "pEtiquetas";
             this.pEtiquetas.Size = new System.Drawing.Size(169, 204);
             this.pEtiquetas.TabIndex = 41;
-            this.pEtiquetas.Visible = false;
             // 
             // rjToggleButton1
             // 
@@ -892,7 +906,7 @@
             this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
-            this.label11.Location = new System.Drawing.Point(661, -3);
+            this.label11.Location = new System.Drawing.Point(679, -3);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 33);
             this.label11.TabIndex = 42;
@@ -912,7 +926,7 @@
             this.btnCancela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancela.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancela.ForeColor = System.Drawing.Color.White;
-            this.btnCancela.Location = new System.Drawing.Point(550, 539);
+            this.btnCancela.Location = new System.Drawing.Point(568, 539);
             this.btnCancela.Name = "btnCancela";
             this.btnCancela.Size = new System.Drawing.Size(104, 32);
             this.btnCancela.TabIndex = 23;
@@ -921,18 +935,8 @@
             this.btnCancela.UseVisualStyleBackColor = false;
             this.btnCancela.Click += new System.EventHandler(this.btnCancela_Click);
             // 
-            // marcasBindingSource
-            // 
-            this.marcasBindingSource.DataMember = "Marcas";
-            // 
-            // marcasTableAdapter1
-            // 
-            this.marcasTableAdapter1.ClearBeforeFill = true;
-            // 
             // rjTextBox1
             // 
-            this.rjTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.rjTextBox1.AutoScroll = true;
             this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))));
@@ -970,12 +974,33 @@
             this.label3.Text = "Informação:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // marcasBindingSource2
+            // 
+            this.marcasBindingSource2.DataMember = "Marcas";
+            this.marcasBindingSource2.DataSource = this.lCPDataSetBindingSource;
+            // 
+            // marcasTableAdapter
+            // 
+            this.marcasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.FornecedoresTableAdapter = null;
+            this.tableAdapterManager.LicitacaoTableAdapter = null;
+            this.tableAdapterManager.MapaTableAdapter = null;
+            this.tableAdapterManager.MarcasTableAdapter = this.marcasTableAdapter;
+            this.tableAdapterManager.ProdutoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Projeto01.LCPDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(691, 612);
+            this.ClientSize = new System.Drawing.Size(709, 612);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pEtiquetas);
@@ -1016,11 +1041,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelProduto.ResumeLayout(false);
             this.panelProduto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSet1)).EndInit();
             this.pEtiquetas.ResumeLayout(false);
             this.pEtiquetas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1070,12 +1099,17 @@
         public RJCodeAdvance.RJControls.RJTextBox txtCodigoExterno;
         public System.Windows.Forms.Label lbCodExt;
         public System.Windows.Forms.Panel pEtiquetas;
-        private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.BindingSource marcasBindingSource;
-        private LCPDataSet1 lCPDataSet1;
         private System.Windows.Forms.BindingSource marcasBindingSource1;
-        private LCPDataSet1TableAdapters.MarcasTableAdapter marcasTableAdapter1;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource lCPDataSetBindingSource;
+        private LCPDataSet lCPDataSet;
+        private System.Windows.Forms.BindingSource marcasBindingSource2;
+        private LCPDataSetTableAdapters.MarcasTableAdapter marcasTableAdapter;
+        private System.Windows.Forms.BindingSource marcasBindingSource3;
+        private LCPDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ComboBox nomeComboBox;
+        private System.Windows.Forms.BindingSource marcasBindingSource4;
     }
 }

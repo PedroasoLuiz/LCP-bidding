@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projeto01.Properties;
 using Projeto01.Model;
+using Projeto01.Views;
 
 namespace Projeto01
 {
@@ -23,6 +24,8 @@ namespace Projeto01
         public int opcoes = 0;
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'lCPDataSet.Mapa'. Você pode movê-la ou removê-la conforme necessário.
+            this.mapaTableAdapter.Fill(this.lCPDataSet.Mapa);
             picOP.Left = 3;
         }
         private void frmPrincipal_Resize(object sender, EventArgs e)
@@ -154,8 +157,30 @@ namespace Projeto01
             fc.panelProduto.Visible = true;
             fc.lbCodExt.Visible = true;
             fc.txtCodigoExterno.Visible = true;
+            fc.pEtiquetas.Visible = false;
             fc.ShowDialog();
         }
 
+        private void mapaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMapa fm = new frmMapa();
+            fm.ShowDialog();
+        }
+
+        private void licitaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void novaLicitaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLicitacao fl = new frmLicitacao();
+            fl.ShowDialog();
+
+        }
     }
 }

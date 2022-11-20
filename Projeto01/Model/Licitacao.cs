@@ -8,7 +8,7 @@ namespace Projeto01.Model
 {
     internal class Licitacao
     {
-        private int idLicitacao;
+        private int idLicitacao;                
         private int codLicitacao;
         private string tipo;
         private DateTime data;

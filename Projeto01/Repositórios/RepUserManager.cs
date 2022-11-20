@@ -24,20 +24,27 @@ namespace Projeto01.Repositórios
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn.OpenConnection();
-            cmd.Parameters.Add("@Binario", SqlDbType.Image);
-
-            if (Usuario.Imagem == null)
-                cmd.Parameters["@Binario"].Value = SqlBinary.Null;
+            //cmd.Parameters.Add("@Binario", SqlDbType.Image);
+            if (Usuario.ImagemOID == null)
+                cmd.Parameters.Add("@ImagemOID", DBNull.Value);
             else
-                cmd.Parameters["@Binario"].Value = Usuario.Imagem;
+                cmd.Parameters.Add("@ImagemOID", Usuario.ImagemOID);
+
+            //if (Usuario.Imagem == null)
+                //cmd.Parameters["@Binario"].Value = SqlBinary.Null;
+            //else
+                //cmd.Parameters["@Binario"].Value = Usuario.Imagem;
 
 
             switch (Program.acao)
             {
                 case 1:
+                    //cmd.CommandText =
+                    //    "INSERT INTO Usuarios (Nome,Email,Senha,Cadastro,Imagem)" +
+                    //    $"VALUES ('{Usuario.Nome}','{Usuario.Email}','{Usuario.Senha}','{DateTime.Now}',@Binario)";
                     cmd.CommandText =
-                        "INSERT INTO Usuarios (Nome,Email,Senha,Cadastro,Imagem)" +
-                        $"VALUES ('{Usuario.Nome}','{Usuario.Email}','{Usuario.Senha}','{DateTime.Now}',@Binario)";
+                           "INSERT INTO Usuarios (Nome, Email, Senha, Cadastro, ImagemOID)" +
+                           $" VALUES ('{Usuario.Nome}', '{Usuario.Email}', '{Usuario.Senha}', '{DateTime.Now}', @ImagemOID)";
                     cmd.ExecuteNonQuery();
                     MessageBox.Show($"{Usuario.Nome} cadastrado com sucesso!");
                     break;
@@ -48,7 +55,7 @@ namespace Projeto01.Repositórios
                           $" Email = '{Usuario.Email.ToLower()}'," +
                           $" Senha = '{Usuario.Senha}'," +
                           $" Alterações = '{DateTime.Now}'," +
-                          $" Imagem = @Binario " +
+                          $" ImagemOID = @Binario " +               // era só Imagem
                        $"WHERE idUser = {Usuario.IdUser}";
                     cmd.ExecuteNonQuery();
                     break;
@@ -85,7 +92,16 @@ namespace Projeto01.Repositórios
                 u.Senha =conn. dr[3].ToString();
                 u.Cadastro = DateTime.Parse(conn.dr[4].ToString());
                 if (!(conn.dr[6] is System.DBNull))
-                      u.Imagem = (byte[])conn.dr[6];
+                {
+                    u.ImagemOID = conn.dr[6].ToString();
+
+                    //MongoUtil MU = new MongoUtil();
+                    //MU.MongoCollection.Find()
+
+                    //u.Imagem = 
+                }
+                    
+                      //u.Imagem = (byte[])conn.dr[6];
                 LU.Add(u);
             }
             conn.CloseConnection();

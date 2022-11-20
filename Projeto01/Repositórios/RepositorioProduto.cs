@@ -19,11 +19,11 @@ namespace Projeto01.Repositórios
             conn = new Conexao();               // Chama a classe conexão
             string Query =
                 $"EXEC Produto_Cadastro " +
-                $"'{obj.CodProduto}'," +
+                $"{obj.CodProduto}," +
                 $"'{obj.Descricao.ToUpper()}'," +
                 $"{obj.Custo}," +
                 $"'{obj.Unidade.ToUpper()}'," +
-                $"{obj.Marca}";
+                $"{int.Parse(obj.Marca)}";
 
             conn.ExecuteQuery(Query);           // Executa a query
             conn.CloseConnection();             // Encerra conexão
@@ -45,11 +45,11 @@ namespace Projeto01.Repositórios
             string Query =
                 $"EXEC Produto_Update " +
                 $"{obj.IdProduto}, " +
-                $"'{obj.CodProduto}', " +
+                $"{obj.CodProduto}, " +
                 $"'{obj.Descricao.ToUpper()}', " +
                 $"{obj.Custo}, " +
                 $"'{obj.Unidade.ToUpper()}', " +
-                $"{obj.Marca}";
+                $"{int.Parse(obj.Marca)}";
 
             conn.ExecuteQuery(Query);           // Executa a query
             conn.CloseConnection();             // Encerra conexão

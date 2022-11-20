@@ -41,8 +41,8 @@ namespace Projeto01
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'lCPDataSet1.Marcas'. Você pode movê-la ou removê-la conforme necessário.
-            this.marcasTableAdapter1.Fill(this.lCPDataSet1.Marcas);
+            // TODO: esta linha de código carrega dados na tabela 'lCPDataSet.Marcas'. Você pode movê-la ou removê-la conforme necessário.
+            this.marcasTableAdapter.Fill(this.lCPDataSet.Marcas);
             frmPrincipal frmPrin = new frmPrincipal();
             this.Top = frmPrin.Top +6;
             this.Width = ActiveForm.Width - 208;
@@ -235,7 +235,7 @@ namespace Projeto01
                                 p.Descricao = txtNome.Texts;
                                 p.Custo = double.Parse(txtCusto.Texts);
                                 p.Unidade = txtUnid.Texts;
-                                p.Marca = cmbMarca.ValueMember;
+                                p.Marca = nomeComboBox.SelectedValue.ToString();
 
                                 RepProd.Add(p);
                                 break;
@@ -247,9 +247,9 @@ namespace Projeto01
                                 p.Descricao = txtNome.Texts;
                                 p.Custo = double.Parse(txtCusto.Texts);
                                 p.Unidade = txtUnid.Texts;
-                                p.Marca = cmbMarca.ValueMember;
+                                p.Marca = nomeComboBox.SelectedValue.ToString();
 
-                                MessageBox.Show(cmbMarca.ValueMember);
+                                
 
                                 RepProd.Update(p);
                                 break;
@@ -453,7 +453,7 @@ namespace Projeto01
                             txtNome.Texts = p.Descricao.ToString();
                             txtCusto.Texts = p.Custo.ToString();
                             txtUnid.Texts = p.Unidade;
-                            cmbMarca.Text = p.Marca;
+                            nomeComboBox.Text = p.Marca;
                         }
                         else
                             LimpaCampos();
@@ -578,6 +578,27 @@ namespace Projeto01
         }
 
         private void lbCadastros_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMarca_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string value = this.nomeComboBox.SelectedValue.ToString();
+            MessageBox.Show(value);
+        }
+
+        private void txtCusto__TextChanged(object sender, EventArgs e)
         {
 
         }

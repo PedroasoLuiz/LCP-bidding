@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Projeto01.Model;
-using System.Data.SqlClient;
-using System.Collections;
 
 namespace Projeto01.Repositórios
 {
@@ -17,9 +12,15 @@ namespace Projeto01.Repositórios
             conn = new Conexao();               // Chama a classe conexão
 
             string Query =
-                "INSERT INTO Mapa (PrecoMax, PrecoMin, Quantidade, Unidade, fkProduto, ValorFinal, fkFornecedor, fkLicitacao) " +
-               $"VALUES ('{obj.PrecoMax}','{obj.PrecoMin}','{obj.Quantidade}','{obj.Unidade}',"+ 
-               $"{obj.FkProduto}','{obj.ValorFinal}','{obj.FkFornecedor}','{obj.FkLicitacao}') ";
+                "EXEC Mapa_Cadastro " +
+               $"{obj.PrecoMax}, " +
+               $"{obj.PrecoMin}, " +
+               $"{obj.Quantidade}, " +
+               $"'{obj.Unidade.ToUpper()}', " +
+               $"{obj.FkProduto}, " +
+               $"{obj.ValorFinal}, " +
+               $"{obj.FkFornecedor}, " +
+               $"{obj.FkLicitacao}";
 
 
             conn.ExecuteQuery(Query);           // Executa a query
@@ -30,8 +31,7 @@ namespace Projeto01.Repositórios
             conn = new Conexao();               // Chama a classe conexão
 
             string Query =
-                $"DELETE Mapa " +
-                $"WHERE idCliente= {obj.IdMapa}";
+                $"EXEC Mapa_Exclui {obj.IdMapa}";
 
             conn.ExecuteQuery(Query);
             conn.CloseConnection();
@@ -46,11 +46,17 @@ namespace Projeto01.Repositórios
         {
             conn = new Conexao();               // Chama a classe conexão
 
-            string Query = 
-                $"UPDATE Mapa " +
-                $"SET PrecoMax = {obj.PrecoMax}, PrecoMin = {obj.PrecoMin}, Quantidade = {obj.Quantidade}, Unidade = {obj.Unidade}, " +
-                $"fkProduto = {obj.FkProduto}, ValorFinal = {obj.ValorFinal}, fkFornecedor = {obj.FkFornecedor}, fkLicitacao = {obj.FkLicitacao}" +
-                $"WHERE idMapa = {obj.IdMapa};";
+            string Query =
+                "EXEC Mapa_Update " +
+               $"{obj.IdMapa}" +
+               $"{obj.PrecoMax}, " +
+               $"{obj.PrecoMin}, " +
+               $"{obj.Quantidade}, " +
+               $"'{obj.Unidade.ToUpper()}', " +
+               $"{obj.FkProduto}, " +
+               $"{obj.ValorFinal}, " +
+               $"{obj.FkFornecedor}, " +
+               $"{obj.FkLicitacao}";
 
 
             conn.ExecuteQuery(Query);           // Executa a query

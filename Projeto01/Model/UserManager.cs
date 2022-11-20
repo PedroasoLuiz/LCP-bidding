@@ -15,6 +15,7 @@ namespace Projeto01.Model
         private DateTime cadastro;
         private DateTime alteracao;
         private byte[] imagem;
+        private String imagemOID;   //novo
 
         public string Nome { get => nome; set => nome = value; }
         public string Email { get => email; set => email = value; }
@@ -23,5 +24,6 @@ namespace Projeto01.Model
         public DateTime Alteracao { get => alteracao; set => alteracao = value; }
         public byte[] Imagem { get => imagem; set => imagem = value; }
         public int IdUser { get => iduser; set => iduser = value; }
+        public string ImagemOID { get => imagemOID; set => imagemOID = value; } //novo
     }
 }

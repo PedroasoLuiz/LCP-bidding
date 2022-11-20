@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panelOpcoes = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbUsuario = new System.Windows.Forms.Label();
@@ -43,13 +47,21 @@
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licitaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novaLicitaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picImagemUser = new CustomControls.RJControls.RJCircularPictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.picOP = new System.Windows.Forms.PictureBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lCPDataSet = new Projeto01.LCPDataSet();
+            this.mapaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mapaTableAdapter = new Projeto01.LCPDataSetTableAdapters.MapaTableAdapter();
             this.panelOpcoes.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagemUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mapaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelOpcoes
@@ -125,6 +137,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(176, 152);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // dashboardToolStripMenuItem
             // 
@@ -151,13 +164,12 @@
             this.cadastrosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(102, 41);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
-    
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -165,7 +177,7 @@
             // 
             this.fornecedoresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
@@ -173,7 +185,7 @@
             // 
             this.marcasToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
@@ -181,14 +193,15 @@
             // 
             this.produtosToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // licitaçõesToolStripMenuItem
             // 
             this.licitaçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mapaToolStripMenuItem});
+            this.mapaToolStripMenuItem,
+            this.novaLicitaçãoToolStripMenuItem});
             this.licitaçõesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.licitaçõesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("licitaçõesToolStripMenuItem.Image")));
             this.licitaçõesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,12 +209,21 @@
             this.licitaçõesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.licitaçõesToolStripMenuItem.Size = new System.Drawing.Size(100, 41);
             this.licitaçõesToolStripMenuItem.Text = "Licitações";
+            this.licitaçõesToolStripMenuItem.Click += new System.EventHandler(this.licitaçõesToolStripMenuItem_Click);
             // 
             // mapaToolStripMenuItem
             // 
             this.mapaToolStripMenuItem.Name = "mapaToolStripMenuItem";
-            this.mapaToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.mapaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.mapaToolStripMenuItem.Text = "Mapa";
+            this.mapaToolStripMenuItem.Click += new System.EventHandler(this.mapaToolStripMenuItem_Click);
+            // 
+            // novaLicitaçãoToolStripMenuItem
+            // 
+            this.novaLicitaçãoToolStripMenuItem.Name = "novaLicitaçãoToolStripMenuItem";
+            this.novaLicitaçãoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.novaLicitaçãoToolStripMenuItem.Text = "Nova licitação";
+            this.novaLicitaçãoToolStripMenuItem.Click += new System.EventHandler(this.novaLicitaçãoToolStripMenuItem_Click);
             // 
             // picImagemUser
             // 
@@ -235,11 +257,58 @@
             this.picOP.TabStop = false;
             this.picOP.Click += new System.EventHandler(this.picOP_Click);
             // 
+            // chart1
+            // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderSkin.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.DataSource = this.mapaBindingSource;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(252, 82);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(154)))), ((int)(((byte)(175)))))};
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueMember = "ValorFinal";
+            series1.YValueMembers = "PrecoMax";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(503, 173);
+            this.chart1.TabIndex = 3;
+            this.chart1.Text = "chart1";
+            title1.Name = "Title1";
+            title1.Text = "Mapa";
+            this.chart1.Titles.Add(title1);
+            // 
+            // lCPDataSet
+            // 
+            this.lCPDataSet.DataSetName = "LCPDataSet";
+            this.lCPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mapaBindingSource
+            // 
+            this.mapaBindingSource.DataMember = "Mapa";
+            this.mapaBindingSource.DataSource = this.lCPDataSet;
+            // 
+            // mapaTableAdapter
+            // 
+            this.mapaTableAdapter.ClearBeforeFill = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 568);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.picOP);
             this.Controls.Add(this.panelOpcoes);
             this.MainMenuStrip = this.menuStrip1;
@@ -252,6 +321,9 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImagemUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lCPDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mapaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,5 +345,10 @@
         private System.Windows.Forms.PictureBox picOP;
         private System.Windows.Forms.Timer timer1;
         public CustomControls.RJControls.RJCircularPictureBox picImagemUser;
+        private System.Windows.Forms.ToolStripMenuItem novaLicitaçãoToolStripMenuItem;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private LCPDataSet lCPDataSet;
+        private System.Windows.Forms.BindingSource mapaBindingSource;
+        private LCPDataSetTableAdapters.MapaTableAdapter mapaTableAdapter;
     }
 }
